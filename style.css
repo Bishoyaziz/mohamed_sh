@@ -58,6 +58,7 @@ a:hover {color: #fff; text-decoration: none;}
     width: 100%;
     overflow: hidden;
     margin: -20px 0;
+    position: relative;
 }
 
 #hero_section::before {
@@ -149,7 +150,7 @@ a:hover {color: #fff; text-decoration: none;}
     text-decoration: none;
     padding: 12px 30px;
     color:  #fff;
-    margin: 20px;
+    /* margin: 20px; */
     border-radius: 10px;
     border: 1px solid #63A1D7;
     display:  inline-block;
@@ -185,8 +186,8 @@ a:hover {color: #fff; text-decoration: none;}
 
 /* Education Section */
 
-#education,#experience {
-    background: darkslategrey;
+#education{
+    background: #ddd;
     height: 100vh;
 }
 
@@ -215,7 +216,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 #education .inner_content,
 #experience .inner_content {
-    margin-top: 20px;
+    margin: 20px 0;
     color: #959595;
 }
 #education .inner_content p,
@@ -223,7 +224,8 @@ a:hover {color: #fff; text-decoration: none;}
     margin-left: 25px;
 }
 #education .inner_content p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight:  bold;
 }
 #education .education_point_icon,
 #experience .education_point_icon {
@@ -241,6 +243,7 @@ a:hover {color: #fff; text-decoration: none;}
 #experience .experience_content {
     position:  relative;
     left:  50px;
+    top: 50px;
 }
 
 #education .education i, #experience i {
@@ -459,6 +462,7 @@ a:hover {color: #fff; text-decoration: none;}
     .hero_section--main-heading p {
         font-size: 1.1em;
     }
+
 }
 
 
@@ -499,8 +503,83 @@ a:hover {color: #fff; text-decoration: none;}
     max-width: 300px;
 }
 
-
 .section_heading {
     padding: 50px 0;
     margin: auto;
 }
+
+.right_social_icons  {
+    position: absolute;
+    right: 0;
+    top: 30%;
+
+}
+ul.hero_ection_social_icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.hero_section_social_icons li {
+    display: block;
+    margin: 5px 20px;
+    font-size: 25px;
+}
+
+ul.hero_section_social_icons li a {
+    color: #fff;
+}
+
+#education .secondary-txt {
+    color: #535759;
+}
+
+
+/* Start Skills */
+
+#skills {
+    background: #ddd;
+    height: 100vh;
+    padding-top: 20px;
+}
+ 
+#skills .section_heading h3 {
+    color: #535759;    
+}
+
+#skills .skills_content {
+    margin-top: 20px;
+}
+
+#skills .skills_content .container {
+    width: 80%;
+}
+
+#skills .hero_section_btn {
+    padding: 5px 30px;
+    font-weight: normal;
+    margin: 20px 0 30px;
+    font-size: 18px;
+}
+
+#skills .skills_item_inner_section .skills_title {
+    color: #535759;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    width: 20%;
+}
+
+#skills .skills_progress_bar {
+    height: 15px;
+    border-radius: 20px;
+    background: #0e0ead94;
+    margin-left: 20px;
+    color: red;
+    width: 45%;
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+/* End Skills */
+
