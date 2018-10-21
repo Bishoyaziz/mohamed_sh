@@ -1,0 +1,506 @@
+/*!
+Theme Name: mohamed_sh
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: mohamed_sh
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/	
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Global Styles */
+a:hover {color: #fff; text-decoration: none;}
+.primary-txt {
+    color: #63A1D7;
+}
+.secondary-txt {
+    color: white;
+    font-size: 1.3em;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+.section_main_heading {
+    text-align: center;
+}
+
+/* End Global Styles */
+
+
+/* Hero Section */
+#hero_section {
+    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/Dubai-xlarge copy.jpg") no-repeat;
+    background-position: 100%; 
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    margin: -20px 0;
+}
+
+#hero_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.sidebar {
+    position: fixed;
+    width: 60px;
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    z-index:  9999;
+}
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position:  absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%,-50%);
+}
+.sidebar ul li {
+    display: block;
+}
+
+ .sidebar ul li a {
+    text-decoration: none;
+}
+
+.sidebar ul li i {
+    color: #fff;
+}
+
+
+.home__main_section {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 60%;
+}
+
+.hero_section--main-heading h3 {
+    font-size: 31px;
+    margin-bottom: 20px;
+}
+.hero_section--controls {
+    margin-top: 50px;
+}
+
+.hero_section--main-heading .circle-img {
+    border-radius: 50%;
+    border: 4px solid #63A1D7;
+    padding:  20px;
+    margin: 30px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.hero_section--main-heading .circle-img img {
+    border-radius: 50%;
+    max-width: 145px;
+    height: 145px;
+    border: 2px solid red;
+    margin: -21px;
+}
+
+.hero_section--button {
+    display: inline-block;
+    margin:  20px;
+}
+
+.hero_section__btns {
+    margin-top: 10px;
+}
+
+.hero_section_btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    color:  #fff;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #63A1D7;
+    display:  inline-block;
+}
+
+.hero_section_btn:hover {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    background: #63A1D7;
+}
+
+.social_icons {
+    color: #fff;
+    font-size: 20px;
+    list-style:  none;
+    position:  relative;
+    top: 50px;
+}
+.social_icons li {
+    display: inline-block;
+    color: #fff;
+}
+
+.social_icons i {
+    margin: 5px;
+    color:  #fff;
+}
+
+
+/* End Hero Section */
+
+
+/* Education Section */
+
+#education,#experience {
+    background: darkslategrey;
+    height: 100vh;
+}
+
+.section_heading {
+    text-align: center;
+}
+.section_heading h3 {
+    color: #fff;
+    font-weight:  normal;
+}
+
+#education h4,
+#experience h4 {
+    display: inline-block;
+
+}
+
+.inner_section_heading a {
+    color: #63A1D7;
+    font-weight: bold;
+    font-size:  20px;
+}
+.experience_point_icon {
+    display: inline;
+}
+
+#education .inner_content,
+#experience .inner_content {
+    margin-top: 20px;
+    color: #959595;
+}
+#education .inner_content p,
+#experience .inner_content  p{
+    margin-left: 25px;
+}
+#education .inner_content p {
+    font-size: 16px;
+}
+#education .education_point_icon,
+#experience .education_point_icon {
+    display: inline;
+}
+
+#education .education_point_icon i,
+#experience .education_point_icon i {
+    color: #63A1D7;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+#education .education_content,
+#experience .experience_content {
+    position:  relative;
+    left:  50px;
+}
+
+#education .education i, #experience i {
+    color: #fff;
+}   
+
+
+
+/* End Education Section */
+
+/* Experience */
+#experience {
+    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/port-said.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* End Experience */
+
+
+/* Inspiration */
+#inspiration_section {
+    background: #2d2c28;
+    height: 100vh;
+}
+
+.inspiration__main_section {
+    position: relative;
+}
+
+.inspiration_row_margin::first-child {
+    margin-bottom: 0;
+}
+
+.inspiration_row_margin {
+    margin-bottom: 40px;
+}
+
+.inspiration_content {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all ease-in 0.3s;
+}
+
+.inspiration_content:hover img{
+    border: 4px solid #6929de;
+    margin: 10px;
+}
+.inspiration_content:hover h3 {
+    color: #6929de;
+}
+
+.inspiration_content p {
+    color: #47945c7a;
+}
+
+.inspiration_content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display:  inline-block;
+}
+
+.inspiration_inner_content {position:  absolute;left:  50%;transform: translate(-50%,35%);top: 0;}
+
+/* End Inspiration */
+
+
+/* Interests */
+
+#interests_section {
+    background: cadetblue;
+    height: 100vh;
+}
+
+.container.interests-container {
+    margin-top: 80px;
+    position: relative;
+    text-align:  center;
+}
+
+.interests-content {
+    text-align: center;
+    margin:  0 10px;
+}
+
+.interests-content p {
+    text-align: center;    
+}
+
+.interests_images {
+    margin: 0 10px;
+}
+
+
+/* End Interests */
+
+
+/* Favorite Books */
+
+
+.favorite-books__main_section h3 {
+    margin-bottom: 20px;
+}
+
+.favorite-books__main_section q {
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.favorite-books__main_section q:before,
+.favorite-books__main_section q:after {
+    color: #6929de;
+}
+
+.favorite-books__main_section p {
+    font-style: italic;
+    color: #959595;
+}
+
+
+.fav-books-container {
+    margin-top: 70px;
+}
+
+.fav_books_images {
+    transition: ease-in 0.5s;
+}
+
+.fav_books_images img {
+    display: block;
+    margin:  auto;
+}
+
+.fav_books_images:hover .overlay {
+    opacity: 1;
+}
+
+.fav_books_images .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 93%;
+    margin:  auto;
+    height: 100%;
+    border: 2px solid #6929de;
+}
+.text {
+    color: #fff;
+    font-size:  30px;
+}
+
+/* End Favorite Books */
+
+
+/* Contact */
+
+.contact__main_section .form-group {
+    margin: 20px auto;
+}
+
+.contact__main_section input,
+.contact__main_section text-area {
+    background: transparent;
+    border: 2px solid #63A1D7;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.contact__main_section .contact-form-textarea {
+	background: transparent
+}
+
+.contact__main_section .contact-form-textarea {
+	text-align: center;
+	padding-top: 10px;
+	width:  100%;
+}
+
+.contact__main_section button {
+    background: transparent;
+    border: 2px solid #63A1D7;
+    outline:  none;
+    cursor:  pointer;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px 50px;
+    font-size:  16px;
+}
+
+/* End Contact */
+
+
+/* Media Quaries */
+
+@media (max-width: 992px) {
+    .inspiration_content {
+        width: auto;
+    }
+    .inspiration_inner_content {
+        left: 0;
+        transform: none;
+        position:  relative;
+    }
+    .hero_section--main-heading p {
+        font-size: 1.1em;
+    }
+}
+
+
+@media(max-width: 767px) {
+    .interests_images {
+        margin: auto;   
+    }
+    .hero_section_btn {
+        display: block;
+    }
+    .social_icons {
+        margin-top: 20px;
+        top: 0;
+    }
+    .hero_section__btns {
+        margin-top: 30px;
+    }
+    .hero_section--button {
+        margin: 10px;
+        display: block;
+    }
+    .fav_books_images {
+        margin: 10px;
+    }
+}
+
+.align-center {
+    position:  relative;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%,-50%);
+}
+
+.grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
+
+.interests_images img{
+    max-width: 300px;
+}
+
+
+.section_heading {
+    padding: 50px 0;
+    margin: auto;
+}
