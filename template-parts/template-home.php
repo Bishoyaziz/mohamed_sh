@@ -199,23 +199,21 @@ $inspiration_2  = new WP_Query(array(
     </section>
 
     <section id="experience">
-        <div class="experience_main_section">
             <div class="container">
-                <div class="row">
-                    <div class="section_heading">
+            <div class="section_heading">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3 class="secondary-txt"><?php echo __('Education') ?></h3>
+                        <h3 class="secondary-txt"><?php echo __('Experience') ?></h3>
                     </div>
-                </div>
                 <div class="experience_content">
+                   
                     <div class="row">
-
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
                                 <a href="#" class="hero_section_btn left-btn">
                                     <?php echo __('Work'); ?>
                                 </a>
                             </div>
+                            
                             <div class="section_content">
                                 <?php while($experience->have_posts()): $experience->the_post(); 
                                            $experience_item_id                =  get_the_id();

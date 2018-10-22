@@ -216,6 +216,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 #experience ul p {
     font-size: 15px;
+    color: #fffee1;
 }
 
 .inner_section_heading a {
@@ -285,6 +286,7 @@ a:hover {color: #fff; text-decoration: none;}
     background-size: cover;
     height: 100vh;
     position: relative;
+    z-index: -2;
 }
 
 #experience::before {
@@ -295,6 +297,7 @@ a:hover {color: #fff; text-decoration: none;}
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.7);
+    z-index: -1;
 }
 
 /* End Experience */
