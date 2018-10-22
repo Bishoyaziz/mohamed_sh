@@ -6,6 +6,10 @@
 
 get_header();
 
+
+
+
+
 ?>
 
     <section id="education">
@@ -19,7 +23,7 @@ get_header();
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
-                                <a href="#" class="hero_section_btn left-btn">Academic</a>
+                                <a href="#" class="hero_section_btn left-btn"><?php echo__('Academic') ?></a>
                             </div>
                             <div class="academic_content">
                                 <div class="inner_content">
@@ -40,7 +44,7 @@ get_header();
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
-                                <a href="#" class="hero_section_btn left-btn">Training</a>
+                            <a href="#" class="hero_section_btn left-btn"><?php echo__('Training') ?></a>
                             </div>
                             <div class="training_content">
                                 <div class="inner_content">

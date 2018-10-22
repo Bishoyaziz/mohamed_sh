@@ -40,7 +40,7 @@ $inspiration_2  = new WP_Query(array(
                         <?php endwhile; ?>
                     </div>
                     <!-- End Row -->
-                    <!-- <div class="row inspiration_row_margin">
+                    <div class="row inspiration_row_margin">
                         <div class="inspiration_content">
                             <img src="https://via.placeholder.com/350x150" alt="">
                             <h3 class="secondary-txt">Martin Scorsese</h3>
@@ -66,12 +66,12 @@ $inspiration_2  = new WP_Query(array(
                             <h3 class="secondary-txt">Martin Scorsese</h3>
                             <p>Film Director</p>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- End Row -->
 
                 </div>
             </div>
-
+        </div>
         </div>
         </div>
     </section>

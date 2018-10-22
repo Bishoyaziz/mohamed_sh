@@ -16,11 +16,12 @@ $interests_2 = new WP_Query( array(
 ?>
 
     <section id="interests_section">
-        <div class="interests__main_section">
-            <div class="section_heading">
-                <div class="heading-icon">
-                    <i class="fa fa-icon"></i>
-                    <h3 class="secondary-txt"><?php echo __('Interests') ?></h3>
+        <div class="contact_main_section">        
+            <div class="container">
+                <div class="row">
+                    <div class="section_heading">
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 7-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                    <h3><?php echo __('Interests') ?></h3>
                 </div>
             </div>
             <div class="container interests-container">

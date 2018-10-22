@@ -28,7 +28,7 @@ body {
 /* Global Styles */
 a:hover {color: #fff; text-decoration: none;}
 .primary-txt {
-    color: #63A1D7;
+    color: #5BA4D9;
 }
 .secondary-txt {
     color: white;
@@ -39,6 +39,10 @@ a:hover {color: #fff; text-decoration: none;}
 
 .section_main_heading {
     text-align: center;
+}
+
+#education .section_content, #experience .section_content {
+    margin: 10px 0;
 }
 
 /* End Global Styles */
@@ -197,6 +201,7 @@ a:hover {color: #fff; text-decoration: none;}
 .section_heading h3 {
     color: #fff;
     font-weight:  normal;
+    margin-top: 10px;
 }
 
 #education h4,
@@ -219,13 +224,22 @@ a:hover {color: #fff; text-decoration: none;}
     margin: 20px 0;
     color: #959595;
 }
-#education .inner_content p,
-#experience .inner_content  p{
+#education  p,
+#experience  p{
     margin-left: 25px;
+    font-weight: 900;
+    color: #939393;
+    font-size: 20px;
 }
+
+#experience ul {
+    margin-left: 45px;
+}
+
 #education .inner_content p {
     font-size: 18px;
     font-weight:  bold;
+    color: #939393;
 }
 #education .education_point_icon,
 #experience .education_point_icon {
@@ -259,6 +273,17 @@ a:hover {color: #fff; text-decoration: none;}
     background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/port-said.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
+    position: relative;
+}
+
+#experience::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
 }
 
 /* End Experience */
@@ -321,12 +346,11 @@ a:hover {color: #fff; text-decoration: none;}
 /* Interests */
 
 #interests_section {
-    background: cadetblue;
+    background: #ddd;
     height: 100vh;
 }
 
 .container.interests-container {
-    margin-top: 80px;
     position: relative;
     text-align:  center;
 }
@@ -411,6 +435,27 @@ a:hover {color: #fff; text-decoration: none;}
 
 /* Contact */
 
+#contact {
+    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/Dubai-xlarge copy.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+#contact h3 {
+    color: #fff;
+}
+
 .contact__main_section .form-group {
     margin: 20px auto;
 }
@@ -432,6 +477,7 @@ a:hover {color: #fff; text-decoration: none;}
 	text-align: center;
 	padding-top: 10px;
 	width:  100%;
+	border: 2px solid #62a1d7;
 }
 
 .contact__main_section button {
@@ -443,6 +489,10 @@ a:hover {color: #fff; text-decoration: none;}
     border-radius: 10px;
     padding: 15px 50px;
     font-size:  16px;
+}
+
+#contact h3 {
+    color: #fff;
 }
 
 /* End Contact */
@@ -468,7 +518,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 @media(max-width: 767px) {
     .interests_images {
-        margin: auto;   
+        margin: auto;
     }
     .hero_section_btn {
         display: block;
@@ -477,9 +527,7 @@ a:hover {color: #fff; text-decoration: none;}
         margin-top: 20px;
         top: 0;
     }
-    .hero_section__btns {
-        margin-top: 30px;
-    }
+    
     .hero_section--button {
         margin: 10px;
         display: block;
@@ -500,7 +548,7 @@ a:hover {color: #fff; text-decoration: none;}
 .grid-item--width2 { width: 50%; }
 
 .interests_images img{
-    max-width: 300px;
+    max-width: 190px;
 }
 
 .section_heading {
@@ -547,9 +595,6 @@ ul.hero_section_social_icons li a {
     color: #535759;    
 }
 
-#skills .skills_content {
-    margin-top: 20px;
-}
 
 #skills .skills_content .container {
     width: 80%;
@@ -567,7 +612,7 @@ ul.hero_section_social_icons li a {
     font-weight: bold;
     font-size: 14px;
     display: inline-block;
-    width: 20%;
+    width: 45%;
 }
 
 #skills .skills_progress_bar {
