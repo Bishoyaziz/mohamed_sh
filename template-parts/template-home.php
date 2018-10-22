@@ -238,7 +238,7 @@ $inspiration_2  = new WP_Query(array(
                                             </a>
                                         </div>
                                         <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
-                                            <p><?php echo $experience_address; ?></p>
+                                            <span><?php echo $experience_address; ?></span>
                                             <p><?php echo $experience_job_title; ?></p>
                                         </div>
                                         <?php if ($experience_from != "" && $experience_to != "") { ?>
@@ -287,7 +287,7 @@ $inspiration_2  = new WP_Query(array(
                                             </a>
                                         </div>
                                         <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
-                                            <p><?php echo $experience_address; ?></p>
+                                            <span><?php echo $experience_address; ?></span>
                                             <p><?php echo $experience_job_title; ?></p>
                                         </div>
                                         <?php if ($experience_from != "" && $experience_to != "") { ?>

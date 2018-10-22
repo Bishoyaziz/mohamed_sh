@@ -209,6 +209,10 @@ a:hover {color: #fff; text-decoration: none;}
     display: inline-block;
 
 }
+#experience .inner_content span {
+    margin: 25px;
+}
+
 
 #experience ul p {
     font-size: 15px;
@@ -637,6 +641,3 @@ ul.hero_section_social_icons li a {
 /* End Skills */
 
 
-.experience_point_icon p {
-    margin-bottom: 0 !important;
-}
