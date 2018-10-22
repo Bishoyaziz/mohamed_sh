@@ -636,3 +636,7 @@ ul.hero_section_social_icons li a {
 
 /* End Skills */
 
+
+.experience_point_icon p {
+    margin-bottom: 0 !important;
+}
