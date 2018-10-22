@@ -286,7 +286,7 @@ a:hover {color: #fff; text-decoration: none;}
     background-size: cover;
     height: 100vh;
     position: relative;
-    z-index: -2;
+    z-index: 0;
 }
 
 #experience::before {
