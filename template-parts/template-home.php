@@ -198,27 +198,27 @@ $inspiration_2  = new WP_Query(array(
         </div>
     </section>
 
-    <section id="experience">
-        <div class="experience_main_section">
-            <div class="container">
-                <div class="row">
-                    <div class="section_heading">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 4-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3><?php echo __('Experience') ?></h3>
-                    </div>
-                </div>
-                <div class="experience_content">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="inner_section_heading">
-                                <a href="" class="hero_section_btn left-btn">
-                                    <?php echo __('Work'); ?>
-                                </a>
-                            </div>
-                            <div class="section_content">
-                                <div class="inner_content">
 
-                                    <?php while($experience->have_posts()): $experience->the_post(); 
+
+    <!-- <section id="experience">
+        <div class="container">
+            <div class="row">
+                <div class="section_heading">
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 4-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                    <h3><?php echo __('Experience') ?></h3>
+                </div>
+            </div>
+            <div class="row experience_content">
+                <div class="col-sm-12 col-md-6">
+                    <div class="inner_section_heading">
+                        <a href="" class="hero_section_btn left-btn">
+                            <?php echo __('Work'); ?>
+                        </a>
+                    </div>
+                    <div class="section_content">
+                        <div class="inner_content">
+
+                            <?php while($experience->have_posts()): $experience->the_post(); 
                                            $experience_item_id                =  get_the_id();
                                            $experience_company_name           =  get_field ('experience_company_name',get_the_id());
                                            $experience_address                =  get_field ('experience_address',get_the_id());
@@ -231,12 +231,12 @@ $inspiration_2  = new WP_Query(array(
                                         if($experience_type == 'work') {
                                     ?>
 
-                                        <div class="experience_point_icon">
-                                            <i class="fa fa-plus"></i>
-                                            <a href="#id <?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id ?>" class="secondary-txt">
-                                                <?php echo $experience_company_name; ?>
-                                                    </h4>
-                                        </div>
+                                <div class="experience_point_icon">
+                                    <i class="fa fa-plus"></i>
+                                    <a href="#id <?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id ?>" class="secondary-txt">
+                                        <?php echo $experience_company_name; ?>
+                                            </h4>
+                                </div>
                                         <p id="id<?php echo $experience_item_id ?>" class="collapse hidden">
                                             <?php echo $experience_address; ?>
                                         </p>
@@ -251,70 +251,67 @@ $inspiration_2  = new WP_Query(array(
                                                 </li>
                                             </ul>
                                             <?php } ?>
-                                                <?php } ?>
-                                                    <?php endwhile; ?>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6">
-                            <div class="inner_section_heading">
-                                <a href="" class="hero_section_btn left-btn">
-                                    <?php echo __('Volunteering'); ?>
-                                </a>
-                            </div>
-                            <div class="section_content">
-
-                                <div class="inner_content">
-
-                                    <?php while($experience->have_posts()): $experience->the_post(); 
-                                        $experience_item_id                =  get_the_id();
-                                        $experience_company_name           =  get_field ('experience_company_name',get_the_id());
-                                        $experience_address                =  get_field ('experience_address',get_the_id());
-                                        $experience_job_title              =  get_field ('experience_job_title',get_the_id());
-                                        $experience_from                   =  get_field ('experience_from',get_the_id());                                    
-                                        $experience_to                     =  get_field ('experience_to',get_the_id());                                    
-                                        $experience_responsbilities        =  get_field ('experience_responsbilities',get_the_id());                                    
-                                        $experience_type                   =  get_field ('experience_type',get_the_id());
-
-                                        if($experience_type !== 'work') {
-                                    ?>
-
-                                        <div class="experience_point_icon">
-                                            <i class="fa fa-plus"></i>
-                                            <a href="#id <?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id ?>" class="secondary-txt">
-                                                <?php echo $experience_company_name; ?>
-                                            </a>
                                         </div>
-                                        <p id="id<?php echo $experience_item_id ?>" class="collapse hidden">
-                                            <?php echo $experience_address; ?>
-                                        </p>
-
-                                        <?php if ($experience_from && $experience_to) { ?>
-                                            <p>
-                                                <?php echo $experience_from; ?> -
-                                                    <?php echo $experience_to; ?>
-                                            </p>
                                         <?php } ?>
+                                            <?php endwhile; ?>
 
-                                                <?php if ($experience_responsbilities) { ?>
-                                                    <ul>
-                                                        <?php echo $experience_responsbilities; ?>
-                                                    </ul>
-                                                    <?php } ?>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="inner_section_heading">
+                                        <a href="" class="hero_section_btn left-btn">
+                                            <?php echo __('Volunteering'); ?>
+                                        </a>
+                                    </div>
+                                    <div class="section_content">
+
+                                        <div class="inner_content">
+
+                                            <?php while($experience->have_posts()): $experience->the_post(); 
+                                                        $experience_item_id                =  get_the_id();
+                                                        $experience_company_name           =  get_field ('experience_company_name',get_the_id());
+                                                        $experience_address                =  get_field ('experience_address',get_the_id());
+                                                        $experience_job_title              =  get_field ('experience_job_title',get_the_id());
+                                                        $experience_from                   =  get_field ('experience_from',get_the_id());                                    
+                                                        $experience_to                     =  get_field ('experience_to',get_the_id());                                    
+                                                        $experience_responsbilities        =  get_field ('experience_responsbilities',get_the_id());                                    
+                                                        $experience_type                   =  get_field ('experience_type',get_the_id());
+
+                                                        if($experience_type !== 'work') {
+                                                ?>
+
+                                                <div class="experience_point_icon">
+                                                    <i class="fa fa-plus"></i>
+                                                    <a href="#id <?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id ?>" class="secondary-txt">
+                                                        <?php echo $experience_company_name; ?>
+                                                    </a>
+                                                    <p id="id<?php echo $experience_item_id ?>" class="collapse hidden">
+                                                        <?php echo $experience_address; ?>
+                                                    </p>
+
+                                                    <?php if ($experience_from != "" && $experience_to != "") { ?>
+                                                        <p>
+                                                            <?php echo $experience_from; ?> -
+                                                                <?php echo $experience_to; ?>
+                                                        </p>
+                                                        <?php } ?>
+
+                                                            <?php if ($experience_responsbilities) { ?>
+                                                                <ul>
+                                                                    <?php echo $experience_responsbilities; ?>
+                                                                </ul>
+                                                            <?php } ?>
+                                                    </div>
+                                                </div>
+                                        <?php } ?>
+                                            <?php endwhile; ?>
+                                            
+
+                                    </div>
                                 </div>
-                                <?php } ?>
-                                    <?php endwhile; ?>
-                                                        
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
+    </section> -->
 
     <section id="skills">
         <div class="skills_main_section">
