@@ -103,7 +103,7 @@ $social_media_2  = new WP_Query(array(
             </div>
             <div class="hero_section--button">
                 <div class="hero_section__btns">
-                    <a href="<?php echo $left_button_link ?>" class="hero_section_btn left-btn">
+                    <a href="<?php echo $left_button_link ?>" class="hero_section_btn ">
                         <?php echo $left_button_text; ?>
                     </a>
                     <a href="<?php echo $right_button_link ?>" class="hero_section_btn right-btn">
@@ -129,7 +129,7 @@ $social_media_2  = new WP_Query(array(
                 <div class="row">
                     <div class="section_heading">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3 class="secondary-txt"><?php echo __('Education') ?></h3>
+                        <h3><?php echo __('Education') ?></h3>
                     </div>
                 </div>
                 <div class="education_content">
@@ -137,7 +137,7 @@ $social_media_2  = new WP_Query(array(
 
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
-                                <span class="hero_section_btn left-btn">
+                                <span class="hero_section_btn ">
                                     <?php echo __('Academic'); ?>
                                 </span>
                             </div>
@@ -178,7 +178,7 @@ $social_media_2  = new WP_Query(array(
 
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
-                                <span class="heading_btn">
+                            <span class="hero_section_btn ">
                                     <?php echo __('Training'); ?>
                                 </span>
                             </div>
@@ -228,16 +228,16 @@ $social_media_2  = new WP_Query(array(
         <div class="container">
             <div class="section_heading">
                 <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                <h3 class="secondary-txt"><?php echo __('Experience') ?></h3>
+                <h3 class="white"><?php echo __('Experience') ?></h3>
             </div>
             <div class="experience_content">
 
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="inner_section_heading">
-                            <span class="heading_btn">
-                                <?php echo __('Work'); ?>
-                            </span>
+                        <span class="hero_section_btn ">
+                                    <?php echo __('Work'); ?>
+                                </span>
                         </div>
 
                         <div class="section_content">
@@ -286,7 +286,7 @@ $social_media_2  = new WP_Query(array(
 
                     <div class="col-sm-12 col-md-6">
                         <div class="inner_section_heading">
-                            <span class="hero_section_btn left-btn">
+                            <span class="hero_section_btn ">
                                 <?php echo __('Volunteering'); ?>
                             </span>
                         </div>
@@ -377,7 +377,7 @@ $social_media_2  = new WP_Query(array(
                                         $skill_7                           =  get_field ('skill_7',get_the_id());
                                         $skill_7_percentage                =  get_field ('skill_7_percentage',get_the_id());
                                     ?>
-                                <div class="col-sm-4">
+                                <div class="col-sm-4 skill_content_wrapper">
 
                                     <div class="inner_section_heading">
                                         <a href="" class="heading_btn">
@@ -486,7 +486,7 @@ $social_media_2  = new WP_Query(array(
             <div class="row">
                 <div class="section_heading">
                     <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 7-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                    <h3><?php echo __('Interests') ?></h3>
+                    <h3 class="white"><?php echo __('Interests') ?></h3>
                 </div>
             </div>
             <div class="container interests-container">
@@ -513,7 +513,7 @@ $social_media_2  = new WP_Query(array(
             <div class="row">
                 <div class="section_heading">
                     <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 8-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                    <h3 class="secondary-txt"><?php echo __('Inspiration') ?></h3>
+                    <h3 class="white"><?php echo __('Inspiration') ?></h3>
                 </div>
             </div>
             <div class="container inspiration_inner_content">
@@ -526,7 +526,7 @@ $social_media_2  = new WP_Query(array(
 
                         <div class="inspiration_content">
                             <img src="<?php echo $inspiration_img['url'] ?>" alt="<?php get_the_title(); ?>">
-                            <h3 class="secondary-txt"><?php echo $inspiration_name; ?></h3>
+                            <h3><?php echo $inspiration_name; ?></h3>
                             <p>
                                 <?php echo $inspiration_job_title; ?>
                             </p>
@@ -546,7 +546,7 @@ $social_media_2  = new WP_Query(array(
                 <div class="row">
                     <div class="section_heading">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 9-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3 class="secondary-txt"><?php echo __('Favorite Books') ?></h3>
+                        <h3><?php echo __('Favorite Books') ?></h3>
                         <q><?php  echo __('Books can be dangerous. The best ones should be labeled “This could change your life')?></q>
                         <p>
                             <?php  echo __('Helen Exley')?>
@@ -581,7 +581,7 @@ $social_media_2  = new WP_Query(array(
                 <div class="row">
                     <div class="section_heading">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 11-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3><?php echo __("Let's Talk") ?></h3>
+                        <h3 class="white"><?php echo __("Let's Talk") ?></h3>
                     </div>
                 </div>
                 <div class="container">
@@ -597,15 +597,15 @@ $social_media_2  = new WP_Query(array(
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-4 contact_info_wrapper">
-                            <div class="contact_info text-left">
+                            <div class="contact_info ">
                                 <span class="heading_btn"><?php echo __('Contact info') ?></span>
                             </div>
-                            <div class="contact_info_details text-left">
+                            <div class="contact_info_details ">
                                 <p><span>Email: </span><?php echo $contact_email ?></p>
                                 <p><span>UAE: </span><?php echo $contact_phone_1 ?></p>
                                 <p><span>Egypt: </span><?php echo $contact_phone_2 ?></p>
                             </div>
-                            <div class="scanner text-left">
+                            <div class="scanner ">
                                 <div class="barcode_txt">
                                     <span class="barcode_txt--first-line">Save my contact</span>
                                     <span>card on your phone</span>

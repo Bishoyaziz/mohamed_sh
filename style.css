@@ -33,13 +33,14 @@ body {
 }
 
 /* Global Styles */
+
 a:hover {color: #fff; text-decoration: none;}
 .primary-txt {
     color: #5BA4D9;
 }
 .secondary-txt {
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding-top: 10px;
 }
 
@@ -49,6 +50,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 #education .section_content, #experience .section_content {
     margin: 10px 0;
+    padding-bottom: 50px;
 }
 
 .education_content .hero_section_btn,
@@ -214,23 +216,23 @@ a:hover {color: #fff; text-decoration: none;}
 
 #education{
     background: #ddd;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section_heading {
     text-align: center;
 }
-.section_heading h3 {
-    color: #fff;
+#education .section_heading h3 {
     font-weight:  normal;
     margin-top: 10px;
+    color: #939393;
 }
 
 .education_content,
 .experience_content {
     padding-top: 100px;
     margin: auto;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 
@@ -240,7 +242,8 @@ a:hover {color: #fff; text-decoration: none;}
 
 }
 #experience .inner_content span {
-    margin: 25px 40px;
+    margin: 25px 20px;
+    font-size: 18px;
 }
 
 
@@ -269,7 +272,7 @@ a:hover {color: #fff; text-decoration: none;}
 }
 #education  p,
 #experience  p{
-    margin-left: 40px;
+    margin-left: 20px;
     font-weight: 900;
     color: #939393;
     font-size: 20px;
@@ -308,7 +311,6 @@ a:hover {color: #fff; text-decoration: none;}
 #experience {
     background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/port-said.jpg") no-repeat center;
     background-size: cover;
-    height: 100vh;
     position: relative;
     z-index: 0;
 }
@@ -373,6 +375,11 @@ a:hover {color: #fff; text-decoration: none;}
     transition: all ease-in 0.7s;
 }
 
+.inspiration_content h3 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
 .inspiration_content:hover img{
     border: 2px solid #5BA4D9;
 }
@@ -404,13 +411,13 @@ a:hover {color: #fff; text-decoration: none;}
 
 #interests_section {
     background: #ddd;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container.interests-container {
     position: relative;
     text-align:  center;
-    margin: 50px 0;
+    margin: 50px 0 0;
 }
 
 .interests-content {
@@ -424,7 +431,7 @@ a:hover {color: #fff; text-decoration: none;}
 .interests_txt p {
     color: #8e8e8f;
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* End Interests */
@@ -531,6 +538,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 .contact_info_wrapper {
     display: block;
+    text-align: left;
 }
 
 
@@ -583,6 +591,7 @@ a:hover {color: #fff; text-decoration: none;}
     text-align: center;
     border-radius: 10px;
     font-size: 18px;
+    margin:  auto;
 }
 .contact__main_section input:focus,
 .contact-textarea:focus {
@@ -626,26 +635,101 @@ a:hover {color: #fff; text-decoration: none;}
 /* End Contact */
 
 
+/* Social Media */
+
+.right_social_icons  {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index:  999;
+}
+ul.hero_ection_social_icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.hero_section_social_icons li {
+    display: block;
+    margin: 5px 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ul.hero_section_social_icons li a {
+    color: #fff;
+}
+
+
+/* End Social Media */
+
 /* Media Quaries */
 
 @media (max-width: 992px) {
-    .inspiration_content {
+    .education_content, .experience_content {
+        padding-top: 50px;
+    }
+    #education p, #experience p {
+        margin-left: 0;
+    }
+    .interests_main_section {
+        width: 100%;
+    }
+    
+    .scanner .barcode_txt .barcode_txt--first-line {
+        margin-right: 0;
+    }
+    .container.fav-books-container {
         width: auto;
+    }
+    .inspiration_content {
+        width: 100%;
     }
 
     .hero_section--main-heading p {
         font-size: 1.1em;
     }
-
 }
 
 
 @media(max-width: 767px) {
+    .section_heading {
+        margin: 0 15px;
+    }
+    
+    body,
+    .contact_info_wrapper {
+        text-align: center;
+    }
+
+    .inspiration_content .secondary-txt {
+        font-size: 18px;
+    }
+    .right_social_icons {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+    }
+    .hero_section_social_icons {
+        margin-bottom: 0;
+    }
+    ul.hero_section_social_icons li {
+        display: inline-block;
+        margin: 5px 15px;
+        text-align: center;
+    }
+    .education_content, .experience_content {
+        margin-left: 0;
+    }
+    .sidebar {
+        display: none;
+    }
     .interests_images {
         margin: auto;
     }
     .hero_section_btn {
-        display: block;
+    margin: 10px auto;
     }
     .social_icons {
         margin-top: 20px;
@@ -681,31 +765,10 @@ a:hover {color: #fff; text-decoration: none;}
     margin: auto;
 }
 
-.right_social_icons  {
-    position: fixed;
-    right: 0;
-    top: 30%;
-    z-index:  999;
-}
-ul.hero_ection_social_icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul.hero_section_social_icons li {
-    display: block;
-    margin: 5px 20px;
-    font-size: 25px;
-}
-
-ul.hero_section_social_icons li a {
-    color: #fff;
-}
 
 #education .secondary-txt {
     color: #939393;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 
@@ -713,7 +776,6 @@ ul.hero_section_social_icons li a {
 
 #skills {
     background: #ddd;
-    height: 100vh;
     padding-top: 20px;
     position:  relative;
 }
@@ -728,37 +790,42 @@ ul.hero_section_social_icons li a {
     margin-top: 100px;
 }
 
+#skills .skill_content_wrapper {
+    margin: 30px 0;
+}
+
 #skills .hero_section_btn {
     padding: 5px 30px;
     font-weight: normal;
     margin: 20px 0 30px;
     font-size: 18px;
 }
+#skills .skills_item_inner_section {
+    margin: 15px 0;
+}
 
 #skills .skills_item_inner_section .skills_title {
     color: #8e8e8f;
     font-weight: bold;
     font-size: 14px;
-    display: inline-block;
 }
 
 #skills .skills_progress_bar {
-    height: 15px;
     border-radius: 20px;
     background: #63A1D7;
     color: red;
     display: inline-block;
-    border: 2px solid #fff;
+}
+
+#skills .language_section .inner_section_heading {
+    margin-bottom: 20px;
 }
 
 /* End Skills */
 
-
-
-
 .progress {
     border-radius: 20px;
-    border: 1px solid #65a2d7;
+    border: 2px solid #5ba4d9;
     background: transparent;
 }
 
@@ -789,6 +856,9 @@ ul.hero_section_social_icons li a {
     border: 2px solid red;
 }
 
-a:hover {
+.inner_content a:hover {
     color: #5BA4D9 !important;
+}
+.white {
+    color: #fff;
 }
