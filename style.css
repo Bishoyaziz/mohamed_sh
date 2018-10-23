@@ -15,6 +15,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */	
 
+
+@font-face {
+    font-family: 'Helvetica Neue.ttf';
+    src: url('assets/fonts/Helvetica Neue.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -23,6 +29,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body {
     overflow-x: hidden;
+    font-family: 'Helvetica Neue.ttf';
 }
 
 /* Global Styles */
@@ -33,7 +40,6 @@ a:hover {color: #fff; text-decoration: none;}
 .secondary-txt {
     color: white;
     font-size: 1.3em;
-    font-weight: normal;
     padding-top: 10px;
 }
 
@@ -44,6 +50,20 @@ a:hover {color: #fff; text-decoration: none;}
 #education .section_content, #experience .section_content {
     margin: 10px 0;
 }
+
+.education_content .hero_section_btn,
+.experience_content .hero_section_btn {
+    padding: 8px 16px;
+}
+.heading_btn {
+    padding: 8px 16px;
+    color: #63A1D7;
+    border-radius: 10px;
+    border: 1px solid #63A1D7;
+    display:  inline-block;
+    margin-top: -13px;
+}
+
 
 /* End Global Styles */
 
@@ -159,6 +179,7 @@ a:hover {color: #fff; text-decoration: none;}
     border: 1px solid #63A1D7;
     display:  inline-block;
     margin:  0 20px;
+    transition: all ease 0.3s;
 }
 
 .hero_section_btn:hover {
@@ -205,13 +226,21 @@ a:hover {color: #fff; text-decoration: none;}
     margin-top: 10px;
 }
 
+.education_content,
+.experience_content {
+    padding-top: 100px;
+    margin: auto;
+    margin-left: 20px;
+}
+
+
 #education h4,
 #experience h4 {
     display: inline-block;
 
 }
 #experience .inner_content span {
-    margin: 25px;
+    margin: 25px 40px;
 }
 
 
@@ -220,10 +249,11 @@ a:hover {color: #fff; text-decoration: none;}
     color: #fffee1;
 }
 
-.inner_section_heading a {
+.inner_section_heading span {
     color: #63A1D7;
-    font-weight: bold;
-    font-size:  20px;
+    font-size: 22px;
+    min-width: 150px;
+    text-align:  center;
 }
 .experience_point_icon {
     display: inline;
@@ -239,7 +269,7 @@ a:hover {color: #fff; text-decoration: none;}
 }
 #education  p,
 #experience  p{
-    margin-left: 25px;
+    margin-left: 40px;
     font-weight: 900;
     color: #939393;
     font-size: 20px;
@@ -262,15 +292,8 @@ a:hover {color: #fff; text-decoration: none;}
 #education .education_point_icon i,
 #experience .education_point_icon i {
     color: #63A1D7;
-    font-size: 17px;
+    font-size: 15px;
     margin-right: 5px;
-}
-
-#education .education_content,
-#experience .experience_content {
-    position:  relative;
-    left:  50px;
-    top: 50px;
 }
 
 #education .education i, #experience i {
@@ -369,9 +392,6 @@ a:hover {color: #fff; text-decoration: none;}
     margin-bottom: 10px;
 }
 
-.inspiration_inner_content {
-    /* position:  absolute; */
-}
 
 /* End Inspiration */
 
@@ -513,14 +533,6 @@ a:hover {color: #fff; text-decoration: none;}
     display: block;
 }
 
-.contact_info_btn {
-    padding: 8px 16px;
-    color: #63A1D7;
-    border-radius: 10px;
-    border: 2px solid #63A1D7;
-    display:  inline-block;
-    margin-top: -13px;
-}
 
 .contact_info_details span {
     color: #8e8e8f;
@@ -543,6 +555,19 @@ a:hover {color: #fff; text-decoration: none;}
 
 .contact__main_section .form-group {
     margin: 20px auto;
+}
+
+.scanner .barcode_txt {
+    margin-bottom: 20px;
+}
+.scanner .barcode_txt .barcode_txt--first-line{
+    margin-top: 30px;
+    margin-right: 150px;
+    display: block;
+}
+.scanner span {
+    color: #fff;
+    font-size: 14px;
 }
 
 .contact__main_section input,
@@ -652,7 +677,7 @@ a:hover {color: #fff; text-decoration: none;}
 }
 
 .section_heading {
-    padding-top: 30px;
+    padding-top: 50px;
     margin: auto;
 }
 
@@ -679,7 +704,8 @@ ul.hero_section_social_icons li a {
 }
 
 #education .secondary-txt {
-    color: #535759;
+    color: #939393;
+    font-size: 22px;
 }
 
 
@@ -699,6 +725,7 @@ ul.hero_section_social_icons li a {
 
 #skills .skills_content .container {
     width: 80%;
+    margin-top: 100px;
 }
 
 #skills .hero_section_btn {
@@ -760,4 +787,8 @@ ul.hero_section_social_icons li a {
 .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
     color: red;
     border: 2px solid red;
+}
+
+a:hover {
+    color: #5BA4D9 !important;
 }

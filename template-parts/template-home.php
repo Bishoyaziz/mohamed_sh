@@ -21,14 +21,12 @@ $education_type                     =  get_field ('education_type',get_the_id())
 
 
 // Contact Info
-$label_1                            =  get_field ('label_1',16);
-$label_1_data                       =  get_field ('label_1_data', 16);
-$label_2                            =  get_field ('label_2',16);
-$label_2_data                       =  get_field ('label_2_data', 16);
-$label_3                            =  get_field ('label_3',16);
-$label_3_data                       =  get_field ('label_3_data', 16);
+$contact_email                      =  get_field ('contact_email',16);
+$contact_phone_1                    =  get_field ('contact_phone_1',16);
+$contact_phone_2                    =  get_field ('contact_phone_2',16);
 
 
+$barcode_image                      = get_field ('barcode_image',16);
 
 
 // Education
@@ -139,9 +137,9 @@ $social_media_2  = new WP_Query(array(
 
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
-                                <a href="#" class="hero_section_btn left-btn">
+                                <span class="hero_section_btn left-btn">
                                     <?php echo __('Academic'); ?>
-                                </a>
+                                </span>
                             </div>
                             <div class="section_content">
 
@@ -180,9 +178,9 @@ $social_media_2  = new WP_Query(array(
 
                         <div class="col-sm-12 col-md-6">
                             <div class="inner_section_heading">
-                                <a href="#" class="hero_section_btn left-btn">
+                                <span class="heading_btn">
                                     <?php echo __('Training'); ?>
-                                </a>
+                                </span>
                             </div>
                             <div class="section_content">
 
@@ -237,9 +235,9 @@ $social_media_2  = new WP_Query(array(
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="inner_section_heading">
-                            <a href="#" class="hero_section_btn left-btn">
+                            <span class="heading_btn">
                                 <?php echo __('Work'); ?>
-                            </a>
+                            </span>
                         </div>
 
                         <div class="section_content">
@@ -288,9 +286,9 @@ $social_media_2  = new WP_Query(array(
 
                     <div class="col-sm-12 col-md-6">
                         <div class="inner_section_heading">
-                            <a href="#" class="hero_section_btn left-btn">
+                            <span class="hero_section_btn left-btn">
                                 <?php echo __('Volunteering'); ?>
-                            </a>
+                            </span>
                         </div>
                         <div class="section_content">
 
@@ -382,7 +380,7 @@ $social_media_2  = new WP_Query(array(
                                 <div class="col-sm-4">
 
                                     <div class="inner_section_heading">
-                                        <a href="" class="hero_section_btn left-btn">
+                                        <a href="" class="heading_btn">
                                             <?php echo $skill_category_name; ?>
                                         </a>
                                         <div class="skills_item_section">
@@ -447,7 +445,7 @@ $social_media_2  = new WP_Query(array(
                         </div>
                         <div class="language_section">
                             <div class="inner_section_heading">
-                                <a href="" class="hero_section_btn left-btn">
+                                <a href="" class="heading_btn">
                                     <?php echo __('Language'); ?>
                                 </a>
                             </div>
@@ -600,16 +598,19 @@ $social_media_2  = new WP_Query(array(
                         <div class="col-md-1"></div>
                         <div class="col-md-4 contact_info_wrapper">
                             <div class="contact_info text-left">
-                                <span class="contact_info_btn"><?php echo __('Contact info') ?></span>
+                                <span class="heading_btn"><?php echo __('Contact info') ?></span>
                             </div>
                             <div class="contact_info_details text-left">
-                                <p><span><?php echo $label_1 ?> </span><?php echo $label_1_data ?></p>
-                                <p><span><?php echo $label_2 ?> </span><?php echo $label_2_data ?></p>
-                                <p><span><?php echo $label_3 ?> </span><?php echo $label_3_data ?></p>
+                                <p><span>Email: </span><?php echo $contact_email ?></p>
+                                <p><span>UAE: </span><?php echo $contact_phone_1 ?></p>
+                                <p><span>Egypt: </span><?php echo $contact_phone_2 ?></p>
                             </div>
-                            <div class="scanner">
-                                <span></span>
-                                <img src="" alt="">
+                            <div class="scanner text-left">
+                                <div class="barcode_txt">
+                                    <span class="barcode_txt--first-line">Save my contact</span>
+                                    <span>card on your phone</span>
+                                </div>
+                                    <img src="<?php echo $barcode_image['url'] ?>" alt="<?php echo $barcode_image['alt'] ?> ">
                             </div>
                         </div>
                     </div>
