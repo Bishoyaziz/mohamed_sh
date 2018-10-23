@@ -10,15 +10,25 @@ get_header();
 $home_image                         =  get_field ('home_image',get_the_id());
 $name                               =  get_field ('name:',get_the_id());
 $summary                            =  get_field ('summary',get_the_id());
-$controls_heading                   =  get_field ('controls_heading',get_the_id());
 $left_button_text                   =  get_field ('left_button_text',get_the_id());
 $left_button_link                   =  get_field ('left_button_link',get_the_id());
 $right_button_text                  =  get_field ('right_button_text',get_the_id());
 $right_button_link                  =  get_field ('right_button_link',get_the_id());
-$social_icon                        =  get_field ('social_icon',get_the_id());
-$social_link                        =  get_field ('social_link',get_the_id());
-$social_link                        =  get_field ('social_link',get_the_id());
+
+
+
 $education_type                     =  get_field ('education_type',get_the_id());
+
+
+// Contact Info
+$label_1                            =  get_field ('label_1',16);
+$label_1_data                       =  get_field ('label_1_data', 16);
+$label_2                            =  get_field ('label_2',16);
+$label_2_data                       =  get_field ('label_2_data', 16);
+$label_3                            =  get_field ('label_3',16);
+$label_3_data                       =  get_field ('label_3_data', 16);
+
+
 
 
 // Education
@@ -61,6 +71,11 @@ $favorite_books_2  = new WP_Query(array(
     'post_status' => 'publish',
     'order'       => 'asc'
 ));
+$social_media_2  = new WP_Query(array(
+    'post_type'   => 'social_media_2',
+    'post_status' => 'publish',
+    'order'       => 'asc'
+));
 
 ?>
     <!-- Hero Section -->
@@ -68,12 +83,13 @@ $favorite_books_2  = new WP_Query(array(
         <div class="right_social_icons pull-right">
             <div class="container">
                 <ul class="hero_section_social_icons">
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                    <?php while( $social_media_2->have_posts() ) : $social_media_2-> the_post();                
+                        $social_media_title                 =  get_field ('social_media_title',get_the_id());
+                        $social_media_link                  =  get_field ('social_media_link',get_the_id());
+                        $social_media_icon                  =  get_field ('social_media_icon',get_the_id());
+                    ?>
+                        <li><a href="<?php echo $social_media_link ?>"><i class="fa fa-<?php echo $social_media_icon ?>"></i></a></li>
+                    <?php endwhile; ?> 
                 </ul>
             </div>
         </div>
@@ -88,9 +104,6 @@ $favorite_books_2  = new WP_Query(array(
                 </p>
             </div>
             <div class="hero_section--button">
-                <p class="secondary-txt">
-                    <?php echo $controls_heading; ?>
-                </p>
                 <div class="hero_section__btns">
                     <a href="<?php echo $left_button_link ?>" class="hero_section_btn left-btn">
                         <?php echo $left_button_text; ?>
@@ -214,23 +227,23 @@ $favorite_books_2  = new WP_Query(array(
     </section>
 
     <section id="experience">
-            <div class="container">
+        <div class="container">
             <div class="section_heading">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3 class="secondary-txt"><?php echo __('Experience') ?></h3>
-                    </div>
-                <div class="experience_content">
-                   
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="inner_section_heading">
-                                <a href="#" class="hero_section_btn left-btn">
-                                    <?php echo __('Work'); ?>
-                                </a>
-                            </div>
-                            
-                            <div class="section_content">
-                                <?php while($experience->have_posts()): $experience->the_post(); 
+                <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                <h3 class="secondary-txt"><?php echo __('Experience') ?></h3>
+            </div>
+            <div class="experience_content">
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="inner_section_heading">
+                            <a href="#" class="hero_section_btn left-btn">
+                                <?php echo __('Work'); ?>
+                            </a>
+                        </div>
+
+                        <div class="section_content">
+                            <?php while($experience->have_posts()): $experience->the_post(); 
                                            $experience_item_id                =  get_the_id();
                                            $experience_company_name           =  get_field ('experience_company_name',get_the_id());
                                            $experience_address                =  get_field ('experience_address',get_the_id());
@@ -243,43 +256,45 @@ $favorite_books_2  = new WP_Query(array(
                                         if($experience_type == 'work') {
                                     ?>
 
-                                    <div class="inner_content">
-                                        <div class="education_point_icon">
-                                            <i class="fa fa-plus"></i>
-                                            <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
-                                                <?php echo $experience_company_name; ?>
-                                            </a>
-                                        </div>
-                                        <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
-                                            <span><?php echo $experience_address; ?></span>
-                                            <p><?php echo $experience_inspiration_job_title; ?></p>
-                                        </div>
-                                        <?php if ($experience_from != "" && $experience_to != "") { ?>
-                                            <p>
-                                                <?php echo $experience_from; ?> -
-                                                    <?php echo $experience_to; ?>
-                                            </p>
-                                            <?php } ?>
-                                                <?php if ($experience_responsbilities) { ?>
-                                                    <ul>
-                                                        <?php echo $experience_responsbilities; ?>
-                                                    </ul>
-                                                    <?php } ?>
+                                <div class="inner_content">
+                                    <div class="education_point_icon">
+                                        <i class="fa fa-plus"></i>
+                                        <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
+                                            <?php echo $experience_company_name; ?>
+                                        </a>
                                     </div>
-                                    <?php } ?>
-                                        <?php endwhile; ?>
-                            </div>
+                                    <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
+                                        <span><?php echo $experience_address; ?></span>
+                                        <p>
+                                            <?php echo $experience_inspiration_job_title; ?>
+                                        </p>
+                                    </div>
+                                    <?php if ($experience_from != "" && $experience_to != "") { ?>
+                                        <p>
+                                            <?php echo $experience_from; ?> -
+                                                <?php echo $experience_to; ?>
+                                        </p>
+                                        <?php } ?>
+                                            <?php if ($experience_responsbilities) { ?>
+                                                <ul>
+                                                    <?php echo $experience_responsbilities; ?>
+                                                </ul>
+                                                <?php } ?>
+                                </div>
+                                <?php } ?>
+                                    <?php endwhile; ?>
                         </div>
+                    </div>
 
-                        <div class="col-sm-12 col-md-6">
-                            <div class="inner_section_heading">
-                                <a href="#" class="hero_section_btn left-btn">
-                                    <?php echo __('Volunteering'); ?>
-                                </a>
-                            </div>
-                            <div class="section_content">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="inner_section_heading">
+                            <a href="#" class="hero_section_btn left-btn">
+                                <?php echo __('Volunteering'); ?>
+                            </a>
+                        </div>
+                        <div class="section_content">
 
-                                <?php while($experience->have_posts()): $experience->the_post(); 
+                            <?php while($experience->have_posts()): $experience->the_post(); 
                                            $experience_item_id                =  get_the_id();
                                            $experience_company_name           =  get_field ('experience_company_name',get_the_id());
                                            $experience_address                =  get_field ('experience_address',get_the_id());
@@ -292,38 +307,40 @@ $favorite_books_2  = new WP_Query(array(
                                         if($experience_type == 'volunteering') {
                                     ?>
 
-                                    <div class="inner_content">
-                                        <div class="education_point_icon">
-                                            <i class="fa fa-plus"></i>
-                                            <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
-                                                <?php echo $experience_company_name; ?>
-                                            </a>
-                                        </div>
-                                        <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
-                                            <span><?php echo $experience_address; ?></span>
-                                            <p><?php echo $experience_inspiration_job_title; ?></p>
-                                        </div>
-                                        <?php if ($experience_from != "" && $experience_to != "") { ?>
-                                            <p>
-                                                <?php echo $experience_from; ?> -
-                                                    <?php echo $experience_to; ?>
-                                            </p>
-                                            <?php } ?>
-                                                <?php if ($experience_responsbilities) { ?>
-                                                    <ul>
-                                                        <?php echo $experience_responsbilities; ?>
-                                                    </ul>
-                                                    <?php } ?>
+                                <div class="inner_content">
+                                    <div class="education_point_icon">
+                                        <i class="fa fa-plus"></i>
+                                        <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
+                                            <?php echo $experience_company_name; ?>
+                                        </a>
                                     </div>
+                                    <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
+                                        <span><?php echo $experience_address; ?></span>
+                                        <p>
+                                            <?php echo $experience_inspiration_job_title; ?>
+                                        </p>
+                                    </div>
+                                    <?php if ($experience_from != "" && $experience_to != "") { ?>
+                                        <p>
+                                            <?php echo $experience_from; ?> -
+                                                <?php echo $experience_to; ?>
+                                        </p>
+                                        <?php } ?>
+                                            <?php if ($experience_responsbilities) { ?>
+                                                <ul>
+                                                    <?php echo $experience_responsbilities; ?>
+                                                </ul>
+                                                <?php } ?>
+                                </div>
 
-                                    <?php } ?>
+                                <?php } ?>
 
-                                        <?php endwhile; ?>
-                            </div>
+                                    <?php endwhile; ?>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -339,97 +356,100 @@ $favorite_books_2  = new WP_Query(array(
                 <div class="skills_content">
                     <div class="container">
                         <div class="row">
-                        <?php while($skills_2->have_posts()): $skills_2->the_post();
+                            <?php while($skills_2->have_posts()): $skills_2->the_post();
                                         $skill_category_name                =  get_field ('skill_category_name',get_the_id());
                                         $skill_1                           =  get_field ('skill_1',get_the_id());
                                         $skill_1_percentage                =  get_field ('skill_1_percentage',get_the_id());
-                                        
+
                                         $skill_22                          =  get_field ('skill_22',get_the_id());
                                         $skill_2_percentage                =  get_field ('skill_2_percentage',get_the_id());
-                                        
+
                                         $skill_3                           =  get_field ('skill_3',get_the_id());
                                         $skill_3_percentage                =  get_field ('skill_3_percentage',get_the_id());
-                                        
+
                                         $skill_4                           =  get_field ('skill_4',get_the_id());
                                         $skill_4_percentage                =  get_field ('skill_4_percentage',get_the_id());
-                                        
+
                                         $skill_5                           =  get_field ('skill_5',get_the_id());
                                         $skill_5_percentage                =  get_field ('skill_5_percentage',get_the_id());
-                                        
+
                                         $skill_6                           =  get_field ('skill_6',get_the_id());
                                         $skill_6_percentage                =  get_field ('skill_6_percentage',get_the_id());
 
                                         $skill_7                           =  get_field ('skill_7',get_the_id());
                                         $skill_7_percentage                =  get_field ('skill_7_percentage',get_the_id());
-                                    ?>                    
-                            <div class="col-sm-4">
-                                
-                            
+                                    ?>
+                                <div class="col-sm-4">
+
                                     <div class="inner_section_heading">
-                                        <a href="" class="hero_section_btn left-btn"><?php echo $skill_category_name; ?> </a>
+                                        <a href="" class="hero_section_btn left-btn">
+                                            <?php echo $skill_category_name; ?>
+                                        </a>
                                         <div class="skills_item_section">
                                             <div class="skills_item_inner_section">
                                                 <span class="skills_title"><?php echo $skill_1; ?> </span>
                                                 <div class="progress">
-                                                        <span style="width:<?php echo $skill_1_percentage; ?>" class="skills_progress_bar"></span>
+                                                    <span style="width:<?php echo $skill_1_percentage; ?>" class="skills_progress_bar"></span>
                                                 </div>
                                             </div>
                                             <div class="skills_item_inner_section">
                                                 <span class="skills_title"><?php echo $skill_22; ?> </span>
                                                 <div class="progress">
-                                                        <span style="width:<?php echo $skill_2_percentage; ?>" class="skills_progress_bar"></span>
-                                                </div>   
+                                                    <span style="width:<?php echo $skill_2_percentage; ?>" class="skills_progress_bar"></span>
+                                                </div>
                                             </div>
 
                                             <?php if($skill_3) { ?>
                                                 <div class="skills_item_inner_section">
                                                     <span class="skills_title"><?php echo $skill_3; ?></span>
                                                     <div class="progress">
-                                                    <span style="width:<?php echo $skill_3_percentage; ?>" class="skills_progress_bar"></span>
-                                                    </div>                                        
+                                                        <span style="width:<?php echo $skill_3_percentage; ?>" class="skills_progress_bar"></span>
+                                                    </div>
                                                 </div>
-                                            <?php } ?>
+                                                <?php } ?>
 
-                                            <?php if($skill_4) { ?>
-                                                <div class="skills_item_inner_section">
-                                                    <span class="skills_title"><?php echo $skill_4; ?></span>
-                                                    <div class="progress">
-                                                    <span style="width:<?php echo $skill_4_percentage; ?>" class="skills_progress_bar"></span>
-                                                    </div>                                        
-                                                </div>
-                                            <?php } ?>
-                                            <?php if($skill_5) { ?>
-                                            <div class="skills_item_inner_section">
-                                                <span class="skills_title"><?php echo $skill_5; ?></span>
-                                                 <div class="progress">
-                                                        <span style="width:<?php echo $skill_5_percentage; ?>" class="skills_progress_bar"></span>
-                                                </div>                                        
-                                            </div>
-                                            <?php } ?>
-                                            <?php if($skill_6) { ?>
-                                                <div class="skills_item_inner_section">
-                                                    <span class="skills_title"><?php echo $skill_6; ?></span>
-                                                    <div class="progress">
-                                                            <span style="width:<?php echo $skill_6_percentage; ?>" class="skills_progress_bar"></span>
-                                                    </div>                                        
-                                                </div>
-                                            <?php } ?>
-                                            <?php if($skill_7) { ?>
-                                            <div class="skills_item_inner_section">
-                                                <span class="skills_title"><?php echo $skill_7; ?></span>
-                                                 <div class="progress">
-                                                        <span style="width:<?php echo $skill_7_percentage; ?>" class="skills_progress_bar"></span>
-                                                </div>                                        
-                                            </div>
-                                            <?php } ?>
+                                                    <?php if($skill_4) { ?>
+                                                        <div class="skills_item_inner_section">
+                                                            <span class="skills_title"><?php echo $skill_4; ?></span>
+                                                            <div class="progress">
+                                                                <span style="width:<?php echo $skill_4_percentage; ?>" class="skills_progress_bar"></span>
+                                                            </div>
+                                                        </div>
+                                                        <?php } ?>
+                                                            <?php if($skill_5) { ?>
+                                                                <div class="skills_item_inner_section">
+                                                                    <span class="skills_title"><?php echo $skill_5; ?></span>
+                                                                    <div class="progress">
+                                                                        <span style="width:<?php echo $skill_5_percentage; ?>" class="skills_progress_bar"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <?php } ?>
+                                                                    <?php if($skill_6) { ?>
+                                                                        <div class="skills_item_inner_section">
+                                                                            <span class="skills_title"><?php echo $skill_6; ?></span>
+                                                                            <div class="progress">
+                                                                                <span style="width:<?php echo $skill_6_percentage; ?>" class="skills_progress_bar"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php } ?>
+                                                                            <?php if($skill_7) { ?>
+                                                                                <div class="skills_item_inner_section">
+                                                                                    <span class="skills_title"><?php echo $skill_7; ?></span>
+                                                                                    <div class="progress">
+                                                                                        <span style="width:<?php echo $skill_7_percentage; ?>" class="skills_progress_bar"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <?php } ?>
                                         </div>
                                     </div>
-                            </div>
-                            <?php endwhile; ?>
+                                </div>
+                                <?php endwhile; ?>
                         </div>
                         <div class="language_section">
                             <div class="inner_section_heading">
-                                <a href="" class="hero_section_btn left-btn"><?php echo __('Language'); ?> </a>
+                                <a href="" class="hero_section_btn left-btn">
+                                    <?php echo __('Language'); ?>
+                                </a>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 language_inner_section">
@@ -464,92 +484,138 @@ $favorite_books_2  = new WP_Query(array(
     </section>
 
     <section id="interests_section">
-            <div class="container interests_main_section">
-                <div class="row">
-                    <div class="section_heading">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 7-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3><?php echo __('Interests') ?></h3>
-                    </div>
+        <div class="container interests_main_section">
+            <div class="row">
+                <div class="section_heading">
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 7-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                    <h3><?php echo __('Interests') ?></h3>
                 </div>
-                <div class="container interests-container">
-                    <div class="row">
-                        <?php while($interests_2-> have_posts()): $interests_2->the_post();?>
-                            <?php 
+            </div>
+            <div class="container interests-container">
+                <div class="row">
+                    <?php while($interests_2-> have_posts()): $interests_2->the_post();?>
+                        <?php 
                                 $interest_title  =  get_field ('interest_title',get_the_ID());
                                 $interest_img    =  get_field ('interest_img',get_the_ID());
                             ?>
-                                <div class="col-md-4 interests_images">
-                                    <img src="<?php echo $interest_img['url'] ?>" alt="<?php echo $interest_img['alt'] ?>">
-                                    <div class="interests_txt">
-                                        <p>
-                                            <?php echo $interest_title; ?>
-                                        </p>
-                                    </div>
+                            <div class="col-md-4 interests_images">
+                                <img src="<?php echo $interest_img['url'] ?>" alt="<?php echo $interest_img['alt'] ?>">
+                                <div class="interests_txt">
+                                    <p>
+                                        <?php echo $interest_title; ?>
+                                    </p>
                                 </div>
-                        <?php endwhile; ?>
-                    </div>                   
+                            </div>
+                            <?php endwhile; ?>
                 </div>
+            </div>
     </section>
 
     <section id="inspiration_section">
-        <div class="inspiration__main_section">
-                <div class="row">
-                    <div class="section_heading">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 8-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                        <h3 class="secondary-txt"><?php echo __('Inspiration') ?></h3>
-                    </div>
+            <div class="row">
+                <div class="section_heading">
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 8-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                    <h3 class="secondary-txt"><?php echo __('Inspiration') ?></h3>
                 </div>
-                <div class="container inspiration_inner_content">
-                    <div class="row inspiration_row_margin">
-                        <?php while( $inspiration_2->have_posts() ) : $inspiration_2 -> the_post(); 
+            </div>
+            <div class="container inspiration_inner_content">
+                <div class="row inspiration_row_margin">
+                    <?php while( $inspiration_2->have_posts() ) : $inspiration_2 -> the_post(); 
                                 $inspiration_img                    =  get_field ('inspiration_img',get_the_id());
                                 $inspiration_name                   =  get_field ('inspiration_name',get_the_id());
                                 $inspiration_job_title              =  get_field ('inspiration_job_title',get_the_id());                        
                             ?>
-                            
-                            <div class="inspiration_content">
-                                <img src="<?php echo $inspiration_img['url'] ?>" alt="<?php get_the_title(); ?>">
-                                <h3 class="secondary-txt"><?php echo $inspiration_name; ?></h3>
-                                <p><?php echo $inspiration_job_title; ?></p>
-                            </div>                        
+
+                        <div class="inspiration_content">
+                            <img src="<?php echo $inspiration_img['url'] ?>" alt="<?php get_the_title(); ?>">
+                            <h3 class="secondary-txt"><?php echo $inspiration_name; ?></h3>
+                            <p>
+                                <?php echo $inspiration_job_title; ?>
+                            </p>
+                        </div>
                         <?php endwhile; ?>
-                    </div>
-                    <!-- End Row -->
                 </div>
+                <!-- End Row -->
             </div>
+        </div>
         </div>
         </div>
     </section>
 
-    <section id="hero_section">
-        <div class="favorite-books__main_section align-center">
+    <section id="favorite_books_section">
+        <div class="favorite-books__main_section">
             <div class="container">
                 <div class="row">
                     <div class="section_heading">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 9-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                         <h3 class="secondary-txt"><?php echo __('Favorite Books') ?></h3>
                         <q><?php  echo __('Books can be dangerous. The best ones should be labeled “This could change your life')?></q>
-                        <p><?php  echo __('Helen Exley')?> </p>
+                        <p>
+                            <?php  echo __('Helen Exley')?>
+                        </p>
                     </div>
                 </div>
 
                 <div class="container fav-books-container">
-                    <div class="row">                
+                    <div class="row">
                         <?php while( $favorite_books_2->have_posts() ) : $favorite_books_2 -> the_post(); 
                             $book_image       =      get_field('book_image', get_the_id());                
                             $book_title       =      get_field('book_title', get_the_id());                            
                         ?>
 
-                        <div class="col-sm-12 col-md-4 fav_books_images">
-                            <img src="<?php echo $book_image['url'] ?>" alt="<?php echo $book_title['alt'] ?>">
-                            <div class="overlay">
-                                <div class="text align-center"><?php echo $book_title; ?></div>
+                            <div class="col-sm-12 col-md-4 fav_books_images">
+                                <img src="<?php echo $book_image['url'] ?>" alt="<?php echo $book_title['alt'] ?>">
+                                <div class="overlay">
+                                    <div class="text align-center">
+                                        <?php echo $book_title; ?>
+                                    </div>
+                                </div>
                             </div>
-                        </div>   
-                        <?php endwhile; ?>             
-                    </div>                
+                            <?php endwhile; ?>
+                    </div>
                 </div>
             </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact__main_section">
+            <div class="container">
+                <div class="row">
+                    <div class="section_heading">
+                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 11-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                        <h3><?php echo __("Let's Talk") ?></h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <?php 
+                            if(ICL_LANGUAGE_CODE=='en'){
+                                echo do_shortcode('[contact-form-7 id="55" title="Contact form 1"]');
+                            }else {
+                                echo do_shortcode('[contact-form-7 id="55" title="Contact form 1"]'); 
+                            }
+                            ?>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4 contact_info_wrapper">
+                            <div class="contact_info text-left">
+                                <span class="contact_info_btn"><?php echo __('Contact info') ?></span>
+                            </div>
+                            <div class="contact_info_details text-left">
+                                <p><span><?php echo $label_1 ?> </span><?php echo $label_1_data ?></p>
+                                <p><span><?php echo $label_2 ?> </span><?php echo $label_2_data ?></p>
+                                <p><span><?php echo $label_3 ?> </span><?php echo $label_3_data ?></p>
+                            </div>
+                            <div class="scanner">
+                                <span></span>
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <?php get_footer(); ?>

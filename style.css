@@ -118,7 +118,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 .hero_section--main-heading h3 {
     font-size: 31px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .hero_section--controls {
     margin-top: 50px;
@@ -158,6 +158,7 @@ a:hover {color: #fff; text-decoration: none;}
     border-radius: 10px;
     border: 1px solid #63A1D7;
     display:  inline-block;
+    margin:  0 20px;
 }
 
 .hero_section_btn:hover {
@@ -305,12 +306,29 @@ a:hover {color: #fff; text-decoration: none;}
 
 /* Inspiration */
 #inspiration_section {
-    background: #2d2c28;
+    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/43189430-H1-Arabian_Oryx copy.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
     padding-bottom: 50px;
+}
+
+#inspiration_section::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0,0,0,0.7);
 }
 
 .inspiration__main_section {
     position: relative;
+}
+.inspiration_content {
+    margin-bottom: 10px;
 }
 
 .inspiration_row_margin::first-child {
@@ -393,6 +411,16 @@ a:hover {color: #fff; text-decoration: none;}
 
 
 /* Favorite Books */
+#favorite_books_section {
+    background: #ddd;
+    padding-bottom: 20px;
+}
+
+#favorite_books_section .section_heading h3,
+#favorite_books_section .section_heading p,
+#favorite_books_section .section_heading q {
+    color:  #8e8e8f;
+}
 .container.fav-books-container {
     width: 680px;
 }
@@ -454,10 +482,12 @@ a:hover {color: #fff; text-decoration: none;}
 /* Contact */
 
 #contact {
-    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/Dubai-xlarge copy.jpg") no-repeat;
+    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/port-said-1076-2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 20px;
 }
 
 #contact::before {
@@ -467,7 +497,44 @@ a:hover {color: #fff; text-decoration: none;}
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: -1;
     background: rgba(0,0,0,0.7);
+}
+
+#contact .section_heading {
+    margin-bottom: 20px;
+}
+
+.contact_info {
+    margin: 30px 0;
+}
+
+.contact_info_wrapper {
+    display: block;
+}
+
+.contact_info_btn {
+    padding: 8px 16px;
+    color: #63A1D7;
+    border-radius: 10px;
+    border: 2px solid #63A1D7;
+    display:  inline-block;
+    margin-top: -13px;
+}
+
+.contact_info_details span {
+    color: #8e8e8f;
+}
+
+.contact_info_details p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.contact-textarea {
+    background: transparent;
+    border: 2px solid #5BA4D9;
+    text-align: center
 }
 
 #contact h3 {
@@ -479,14 +546,24 @@ a:hover {color: #fff; text-decoration: none;}
 }
 
 .contact__main_section input,
-.contact__main_section text-area {
-    background: transparent;
+.contact-textarea {
     border: 2px solid #63A1D7;
+    /* padding: 25px 0; */
+    outline: none;
+}
+
+.contact__main_section input,
+.contact__main_section {
+    background: transparent;
     text-align: center;
-    padding: 20px;
     border-radius: 10px;
     font-size: 18px;
 }
+.contact__main_section input:focus,
+.contact-textarea:focus {
+    background: transparent;
+}
+
 .contact__main_section .contact-form-textarea {
 	background: transparent
 }
@@ -511,6 +588,14 @@ a:hover {color: #fff; text-decoration: none;}
 
 #contact h3 {
     color: #fff;
+}
+
+.send-btn {
+    cursor: pointer;
+    padding: 8px 45px !important;
+    font-size: 16px !important;
+    border: none;
+    outline: none;
 }
 
 /* End Contact */
@@ -556,6 +641,7 @@ a:hover {color: #fff; text-decoration: none;}
     top: 50%;
     left:  50%;
     transform: translate(-50%,-50%);
+    text-align:  center;
 }
 
 .grid-item { width: 25%; }
@@ -670,4 +756,8 @@ ul.hero_section_social_icons li a {
 
 .language_inner_section:not(.checked) {
     color: #5757589e;
+}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+    color: red;
+    border: 2px solid red;
 }
