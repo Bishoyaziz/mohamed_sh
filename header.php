@@ -25,18 +25,17 @@
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
 		<div class="sidebar">
-			<?php
-				/*
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',	
-					'items_wrap'     => '<ul><li></li></ul>',
-					'link_before' 	 => '<img src="http://localhost/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset2-8.png" />'					
-				) );
-
-			   
-			   wp_nav_menu( $settings );*/
-			?>
+			<ul>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">Test</span></a></li>
+				<li><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">Test</span></a></li>				
+			</ul>
         </div>
 				
 		</nav><!-- #site-navigation -->

@@ -102,7 +102,7 @@ a:hover {color: #fff; text-decoration: none;}
 .sidebar {
     position: fixed;
     width: 60px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     height: 100%;
     z-index:  9999;
 }
@@ -232,7 +232,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 .education_content,
 .experience_content {
-    padding-top: 100px;
+    padding-top: 50px;
     margin: auto;
     margin-left: 50px;
 }
@@ -863,4 +863,13 @@ ul.hero_section_social_icons li a {
 }
 .white {
     color: #fff;
+}
+
+.menu_icon {
+    display: inline-block;
+    width: 28px;
+    margin: 10px 0;
+}
+.menu_txt {
+    display: none;
 }
