@@ -111,12 +111,12 @@ $social_media_2  = new WP_Query(array(
                     </a>
                 </div>
                 <div class="social_icons">
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-hidden="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-hidden="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-hidden="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-hidden="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-hidden="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-hidden="true"></i></a></li>
+                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
+                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
+                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
+                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
+                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
+                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
                 </div>
             </div>
         </div>
@@ -163,7 +163,7 @@ $social_media_2  = new WP_Query(array(
                                                     <?php echo $education_title; ?>
                                                 </a>
                                             </div>
-                                            <p id="id<?php echo $education_item_id; ?>" class="collapse hidden">
+                                            <p id="id<?php echo $education_item_id; ?>" class="collapse show">
                                                 <?php echo $education_description; ?>
                                             </p>
                                             <p>
@@ -204,7 +204,7 @@ $social_media_2  = new WP_Query(array(
                                                     <?php echo $education_title; ?>
                                                 </a>
                                             </div>
-                                            <p id="id<?php echo $education_item_id; ?>" class="collapse hidden">
+                                            <p id="id<?php echo $education_item_id; ?>" class="collapse show">
                                                 <?php echo $education_description; ?>
                                             </p>
                                             <p>
@@ -255,13 +255,13 @@ $social_media_2  = new WP_Query(array(
                                     ?>
 
                                 <div class="inner_content">
-                                    <div class="education_point_icon">
+                                    <div class="experience_point_icon">
                                         <i class="fa fa-plus"></i>
                                         <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
                                             <?php echo $experience_company_name; ?>
                                         </a>
                                     </div>
-                                    <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
+                                    <div id="id<?php echo $experience_item_id; ?>" class="collapse show">
                                         <span><?php echo $experience_address; ?></span>
                                         <p>
                                             <?php echo $experience_inspiration_job_title; ?>
@@ -312,7 +312,7 @@ $social_media_2  = new WP_Query(array(
                                             <?php echo $experience_company_name; ?>
                                         </a>
                                     </div>
-                                    <div id="id<?php echo $experience_item_id; ?>" class="collapse hidden">
+                                    <div id="id<?php echo $experience_item_id; ?>" class="collapse show">
                                         <span><?php echo $experience_address; ?></span>
                                         <p>
                                             <?php echo $experience_inspiration_job_title; ?>
@@ -406,38 +406,38 @@ $social_media_2  = new WP_Query(array(
                                                 </div>
                                                 <?php } ?>
 
-                                                    <?php if($skill_4) { ?>
+                                            <?php if($skill_4) { ?>
+                                                <div class="skills_item_inner_section">
+                                                    <span class="skills_title"><?php echo $skill_4; ?></span>
+                                                    <div class="progress">
+                                                        <span style="width:<?php echo $skill_4_percentage; ?>" class="skills_progress_bar"></span>
+                                                    </div>
+                                                </div>
+                                                <?php } ?>
+                                                    <?php if($skill_5) { ?>
                                                         <div class="skills_item_inner_section">
-                                                            <span class="skills_title"><?php echo $skill_4; ?></span>
+                                                            <span class="skills_title"><?php echo $skill_5; ?></span>
                                                             <div class="progress">
-                                                                <span style="width:<?php echo $skill_4_percentage; ?>" class="skills_progress_bar"></span>
+                                                                <span style="width:<?php echo $skill_5_percentage; ?>" class="skills_progress_bar"></span>
                                                             </div>
                                                         </div>
                                                         <?php } ?>
-                                                            <?php if($skill_5) { ?>
+                                                            <?php if($skill_6) { ?>
                                                                 <div class="skills_item_inner_section">
-                                                                    <span class="skills_title"><?php echo $skill_5; ?></span>
+                                                                    <span class="skills_title"><?php echo $skill_6; ?></span>
                                                                     <div class="progress">
-                                                                        <span style="width:<?php echo $skill_5_percentage; ?>" class="skills_progress_bar"></span>
+                                                                        <span style="width:<?php echo $skill_6_percentage; ?>" class="skills_progress_bar"></span>
                                                                     </div>
                                                                 </div>
                                                                 <?php } ?>
-                                                                    <?php if($skill_6) { ?>
+                                                                    <?php if($skill_7) { ?>
                                                                         <div class="skills_item_inner_section">
-                                                                            <span class="skills_title"><?php echo $skill_6; ?></span>
+                                                                            <span class="skills_title"><?php echo $skill_7; ?></span>
                                                                             <div class="progress">
-                                                                                <span style="width:<?php echo $skill_6_percentage; ?>" class="skills_progress_bar"></span>
+                                                                                <span style="width:<?php echo $skill_7_percentage; ?>" class="skills_progress_bar"></span>
                                                                             </div>
                                                                         </div>
                                                                         <?php } ?>
-                                                                            <?php if($skill_7) { ?>
-                                                                                <div class="skills_item_inner_section">
-                                                                                    <span class="skills_title"><?php echo $skill_7; ?></span>
-                                                                                    <div class="progress">
-                                                                                        <span style="width:<?php echo $skill_7_percentage; ?>" class="skills_progress_bar"></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <?php } ?>
                                         </div>
                                     </div>
                                 </div>

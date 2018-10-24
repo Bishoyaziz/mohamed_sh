@@ -33,7 +33,9 @@ body {
 }
 
 /* Global Styles */
-
+.section_heading h3  {
+    padding-top: 10px;
+}
 a:hover {color: #fff; text-decoration: none;}
 .primary-txt {
     color: #5BA4D9;
@@ -249,7 +251,8 @@ a:hover {color: #fff; text-decoration: none;}
 
 #experience ul p {
     font-size: 15px;
-    color: #fffee1;
+    font-weight:  normal;
+    color: #fff;
 }
 
 .inner_section_heading span {
@@ -388,7 +391,7 @@ a:hover {color: #fff; text-decoration: none;}
 }
 
 .inspiration_content p {
-    color: #47945c7a;
+    color: #8e8e8f;
 }
 
 .inspiration_content img {
@@ -412,6 +415,8 @@ a:hover {color: #fff; text-decoration: none;}
 #interests_section {
     background: #ddd;
     min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .container.interests-container {
@@ -481,6 +486,7 @@ a:hover {color: #fff; text-decoration: none;}
     display: block;
     margin:  auto;
     border: 2px solid #62a1d7;
+    max-width: 200px;
 }
 
 .fav_books_images:hover .overlay {
@@ -525,7 +531,7 @@ a:hover {color: #fff; text-decoration: none;}
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
 }
 
 #contact .section_heading {
@@ -555,10 +561,6 @@ a:hover {color: #fff; text-decoration: none;}
     background: transparent;
     border: 2px solid #5BA4D9;
     text-align: center
-}
-
-#contact h3 {
-    color: #fff;
 }
 
 .contact__main_section .form-group {
@@ -620,9 +622,6 @@ a:hover {color: #fff; text-decoration: none;}
     font-size:  16px;
 }
 
-#contact h3 {
-    color: #fff;
-}
 
 .send-btn {
     cursor: pointer;
@@ -667,7 +666,7 @@ ul.hero_section_social_icons li a {
 
 @media (max-width: 992px) {
     .education_content, .experience_content {
-        padding-top: 50px;
+        padding-top: 50px !important;
     }
     #education p, #experience p {
         margin-left: 0;
@@ -776,7 +775,7 @@ ul.hero_section_social_icons li a {
 
 #skills {
     background: #ddd;
-    padding-top: 20px;
+    padding-top: 50px;
     position:  relative;
 }
  
@@ -787,7 +786,10 @@ ul.hero_section_social_icons li a {
 
 #skills .skills_content .container {
     width: 80%;
-    margin-top: 100px;
+}
+
+.skills_content {
+    padding-top: 10px;
 }
 
 #skills .skill_content_wrapper {
