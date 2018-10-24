@@ -17,7 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 @font-face {
-    font-family: 'Helvetica Neue.ttf';
+    font-family: 'Helvetica Neue';
     src: url('assets/fonts/Helvetica Neue.ttf');
 }
 
@@ -29,8 +29,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body {
     overflow-x: hidden;
-    font-family: 'Helvetica Neue.ttf';
+    font-family: 'Helvetica Neue',Arial, Helvetica, sans-serif;
 }
+
 
 /* Global Styles */
 .section_heading h3  {
@@ -106,6 +107,10 @@ a:hover {color: #fff; text-decoration: none;}
     height: 100%;
     z-index:  9999;
 }
+.navbar {
+    position: static;
+}
+
 .sidebar ul {
     padding: 0;
     margin: 0;
@@ -184,6 +189,7 @@ a:hover {color: #fff; text-decoration: none;}
     display:  inline-block;
     margin:  0 20px;
     transition: all ease 0.3s;
+    outline: none;
 }
 
 .hero_section_btn:hover {
@@ -382,6 +388,13 @@ a:hover {color: #fff; text-decoration: none;}
     color: #fff;
     font-size: 1.2em;
 }
+.inspiration_content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display:  inline-block;
+    margin-bottom: 10px;
+}
 
 .inspiration_content:hover img{
     border: 2px solid #5BA4D9;
@@ -394,13 +407,6 @@ a:hover {color: #fff; text-decoration: none;}
     color: #8e8e8f;
 }
 
-.inspiration_content img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display:  inline-block;
-    margin-bottom: 10px;
-}
 
 
 /* End Inspiration */
@@ -454,7 +460,7 @@ a:hover {color: #fff; text-decoration: none;}
     color:  #8e8e8f;
 }
 .container.fav-books-container {
-    width: 680px;
+    width: 880px;
 }
 
 .favorite-books__main_section h3 {
@@ -464,7 +470,7 @@ a:hover {color: #fff; text-decoration: none;}
 .favorite-books__main_section q {
     color: #fff;
     font-style: italic;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .favorite-books__main_section q:before,
@@ -487,10 +493,13 @@ a:hover {color: #fff; text-decoration: none;}
     margin:  auto;
     border: 2px solid #62a1d7;
     max-width: 200px;
+    min-height:  100%;
+    min-width:  100%;
 }
 
 .fav_books_images:hover .overlay {
     opacity: 1;
+    transition: ease 0.3s;
 }
 
 .fav_books_images .overlay {
@@ -873,3 +882,15 @@ ul.hero_section_social_icons li a {
 .menu_txt {
     display: none;
 }
+
+.close {
+    border: 1px solid #ddd !important;
+}
+.modal-backdrop.fade {
+    opacity: 0 !important;
+} 
+
+.modal-body {
+    width: 800px !important;
+}
+

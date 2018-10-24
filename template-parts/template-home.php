@@ -76,6 +76,27 @@ $social_media_2  = new WP_Query(array(
 ));
 
 ?>
+
+
+	<nav id="site-navigation" class="main-navigation">
+		<div class="sidebar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+            <div id="mySidenav" class="sidenav">
+				<ul>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">Test</span></a></li>
+					<li class="nav-item"><a href="#"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">Test</span></a></li>				
+				</ul>
+        </div>			
+	</nav><!-- #site-navigation -->
     <!-- Hero Section -->
     <section id="hero_section">
         <div class="right_social_icons pull-right">
@@ -103,21 +124,24 @@ $social_media_2  = new WP_Query(array(
             </div>
             <div class="hero_section--button">
                 <div class="hero_section__btns">
-                    <a href="<?php echo $left_button_link ?>" class="hero_section_btn ">
+                    <a href="<?php echo $left_button_link ?>" class="hero_section_btn " data-toggle="modal" data-target="#videoResume">
                         <?php echo $left_button_text; ?>
                     </a>
+                    <div class="modal fade" id="videoResume" tabindex="-1" role="dialog" aria-labelledby="videoResume">
+                        <div class="modal-dialog" role="document" id="videoResume">
+                            <div class="modal-content">
+                                <div class="modal-body">                                
+                                    <!-- <iframe id="iframeYoutube" width="400" height="315"  src="https://www.youtube.com/embed/e80BbX05D7Y" frameborder="0" allowfullscreen></iframe>                                      -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <a href="<?php echo $right_button_link ?>" class="hero_section_btn right-btn">
                         <?php echo $right_button_text; ?>
                     </a>
                 </div>
-                <div class="social_icons">
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
-                    <li><a href="<?php echo $social_link; ?>"><i class="fa fa-<?php echo $social_icon; ?>" aria-show="true"></i></a></li>
-                </div>
+
             </div>
         </div>
     </section>
@@ -618,5 +642,7 @@ $social_media_2  = new WP_Query(array(
             </div>
         </div>
     </section>
+
+
 
     <?php get_footer(); ?>
