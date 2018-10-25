@@ -110,7 +110,9 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
 .navbar {
     position: relative;
     z-index:  999;
+    height:  100vh;
 }
+
 
 .sidebar ul {
     padding: 0;
@@ -197,6 +199,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     color: #fff;
     outline: none;
     background: #63A1D7;
+    text-align:  center;
 }
 
 .social_icons {
@@ -265,7 +268,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     color: #63A1D7;
     font-size: 22px;
     min-width: 120px;
-    text-align: left;
+    text-align: center;
 }
 .experience_point_icon {
     display: inline;
@@ -696,7 +699,7 @@ ul.hero_section_social_icons li a:hover {
         min-width: auto;
     }
     .contact_info_details p {
-        font-size: 0.6em;
+        font-size: 16px;
     }
     #ifram {
         width: 100%;
@@ -903,6 +906,19 @@ ul.hero_section_social_icons li a:hover {
 
 /* Navbar */
 
+.menu-item-wrapper a:hover {
+    border-color: #5BA4D9;
+}
+
+.menu_txt:hover {
+    border:1px solid;
+    border-left: none;
+}
+
+.menu_txt {
+    visibility: hidden;
+}
+
 
 .menu_txt {
     text-align: center;
@@ -916,8 +932,8 @@ ul.hero_section_social_icons li a:hover {
     font-size:  18px;
     border: 1px solid;
     border-left:  none;
-    padding: 5px 35px;
-    top: -10px;
+    padding: 8px 35px;
+    top: 0;
     cursor:  pointer;
     border-radius: 0px 15px 15px 0px;
 }
@@ -938,11 +954,12 @@ ul.hero_section_social_icons li a:hover {
 .menu-item {
     display: inline-block;
     background: #000;
-    height: 100vh;
+    height: 8vh;
     width: 60px;
     text-align: center;
+    margin-top: 15px;
 }
-.menu-item-wrapper {}
+
 .menu-txt-wrapper {
     position: relative;
     top: 87px;
@@ -954,12 +971,43 @@ ul.hero_section_social_icons li a:hover {
     }
 }
 @media(max-width: 767px) {
+    .menu-item-wrapper {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .navbar {
+        height: auto;
+    }
+    .menu_txt {
+        visibility: visible !important;
+        border-right: 0;
+        border-left: 0;
+    }
+    .menu_txt:first-child {
+        border-top: 0 !important;
+    }
+    .menu_txt:hover {
+        border-right: 0;
+    }
+   
+    #navbarNavDropdown {
+        margin-top: -15px;
+    }
+ 
     .menu-item {
         width: 100% !important;
     }
     .menu_txt {
-        left: -154px;
         z-index: 999;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        border: 1px solid;
+        border-radius:  unset;
+        margin: 5px 0;
+        width: 102%;
+        border-bottom: 0 !important;
+        padding: 20px;
     }
     .menu_icon {
         display: none !important;
@@ -967,7 +1015,7 @@ ul.hero_section_social_icons li a:hover {
     .toggle-menu-icon {
         width: 30px;
         height: 1px;
-        background: #ffffffc4;
+        background: #156cc2;
         display: block;
         margin: 8px 0;
     }
@@ -975,8 +1023,9 @@ ul.hero_section_social_icons li a:hover {
         border-color: #156cc2;
         border-radius: 15px;
         outline: none;
-        position: absolute;
+        position: relative;
         top: 25px;
+        left: 42%;
     }
     .sidebar-navbar-collapse.collapse.show ul {
         background: #000;
@@ -988,13 +1037,13 @@ ul.hero_section_social_icons li a:hover {
         padding-top: 150px;
     }
     .navbar {
-        display:  flex;
-        justify-content:  flex-end;
+    padding:  0;
+    display:  block;
+    position:  relative;
     }
     
     
     .section_heading {
-        margin: 0 15px;
     }
     
     body,
@@ -1046,19 +1095,9 @@ ul.hero_section_social_icons li a:hover {
     }
 }
 
-.menu_txt {
-    visibility: hidden;
-}
 
-#navbarNavDropdown {
-    margin-top: 150px;
-}
 
-.menu-item-wrapper a:hover {
-    border-color: #5BA4D9;
-}
-
-.menu_txt:hover {
-    border:1px solid;
-    border-left: none;
+.toggle-wrapper {
+    background: #000;
+    height: 80px;
 }

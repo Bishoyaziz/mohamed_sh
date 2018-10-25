@@ -78,14 +78,17 @@ $social_media_2  = new WP_Query(array(
 ?>
 
 
+
 		<div class="sidebar">
             <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="toggle-wrapper">
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="toggle-menu-icon"></span>
                     <span class="toggle-menu-icon"></span>
                     <span class="toggle-menu-icon"></span>                
                 </button>
-                <div id="navbarNavDropdown" class="sidebar-navbar-collapse sm-collapse">
+                </div>
+                <div id="navbarNavDropdown" class="sidebar-navbar-collapse sm-collapse collapsed">
                     <div class="menu-item-wrapper" >
                         <a href="#about" class="menu-wrapper">
                             <div class="menu-item">
