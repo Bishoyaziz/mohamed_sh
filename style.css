@@ -38,7 +38,7 @@ body {
 .section_heading h3  {
     padding-top: 10px;
 }
-a:hover {color: #fff; text-decoration: none;}
+a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
 .primary-txt {
     color: #5BA4D9;
 }
@@ -103,24 +103,23 @@ a:hover {color: #fff; text-decoration: none;}
 
 .sidebar {
     position: fixed;
-    width: 100px;
-    background: rgba(0,0,0,0.7);
-    height: 100%;
     z-index: 3;
+    background: rgba(0,0,0.7);
+    width: 60px;
 }
 .navbar {
-    position: static;
-    margin-top: 20px;
+    position: relative;
+    z-index:  999;
 }
 
 .sidebar ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    position:  absolute;
-    top: 50%;
-    left:  50%;
-    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 23%;
+    left: 0;
+    right:  0;
 }
 .sidebar ul li {
     display: block;
@@ -729,87 +728,7 @@ ul.hero_section_social_icons li a:hover {
 }
 
 
-@media(max-width: 767px) {
-    .toggle-menu-icon {
-        width: 30px;
-        height: 1px;
-        background: #ffffffc4;
-        display: block;
-        margin: 8px 0;
-    }
-    .navbar-light .navbar-toggler {
-        border-color: #156cc2;
-        border-radius: 15px;
-        outline: none;
-    }
-    .sidebar-navbar-collapse.collapse.show ul {
-        background: #000;
-        width: 100%;
-        top: 75px;
-        left: 0;
-        bottom: 0;
-        transform: none;
-        padding-top: 150px;
-    }
-    .navbar {
-        display:  flex;
-        justify-content:  flex-end;
-    }
-    
-    
-    .section_heading {
-        margin: 0 15px;
-    }
-    
-    body,
-    .contact_info_wrapper {
-        text-align: center;
-    }
 
-    .inspiration_content .secondary-txt {
-        font-size: 18px;
-    }
-    .right_social_icons {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        background: #000;
-    }
-    .hero_section_social_icons {
-        margin-bottom: 0;
-    }
-    ul.hero_section_social_icons li {
-        display: inline-block;
-        margin: 5px 15px;
-        text-align: center;
-    }
-    .education_content, .experience_content {
-        margin-left: 0;
-    }
-    .sidebar {
-        /* display: none; */
-        width:  100%;
-        background: none;
-    }
-    .interests_images {
-        margin: auto;
-    }
-    .hero_section_btn {
-    margin: 10px auto;
-    }
-    .social_icons {
-        margin-top: 20px;
-        top: 0;
-    }
-    
-    .hero_section--button {
-        margin: 10px;
-        display: block;
-    }
-    .fav_books_images {
-        margin: 10px;
-    }
-}
 
 .align-center {
     position: relative;
@@ -936,9 +855,11 @@ ul.hero_section_social_icons li a:hover {
 }
 
 .menu_icon {
-    display: block;
+    display: inline-block;
     width: 28px;
-    margin: 10px auto;
+    margin: 0 auto;
+    position: relative;
+    z-index:  999;
 }
 
 
@@ -983,11 +904,161 @@ ul.hero_section_social_icons li a:hover {
 /* Navbar */
 
 
-.navbar-items a {
-    text-transform: capitalize;
-}
 .menu_txt {
     text-align: center;
-    display: block;
+    display: inline-block;
     color: #5BA4D9;
+    margin: 10px;
+    text-transform: capitalize;
+    position:  relative;
+    background:  #000;
+    left: 32px;
+    font-size:  18px;
+    border: 1px solid;
+    border-left:  none;
+    padding: 5px 35px;
+    top: -10px;
+    cursor:  pointer;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.menu-item-wrapper:hover {
+    color: #fff !important;
+}
+
+.menu-wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right:  0;
+}
+
+.menu-item {
+    display: inline-block;
+    background: #000;
+    height: 100vh;
+    width: 60px;
+    text-align: center;
+}
+.menu-item-wrapper {}
+.menu-txt-wrapper {
+    position: relative;
+    top: 87px;
+}
+
+@media (min-width: 992px) {
+    .menu-txt-wrapper {
+        left: 25px;
+    }
+}
+@media(max-width: 767px) {
+    .menu-item {
+        width: 100% !important;
+    }
+    .menu_txt {
+        left: -154px;
+        z-index: 999;
+    }
+    .menu_icon {
+        display: none !important;
+    }
+    .toggle-menu-icon {
+        width: 30px;
+        height: 1px;
+        background: #ffffffc4;
+        display: block;
+        margin: 8px 0;
+    }
+    .navbar-light .navbar-toggler {
+        border-color: #156cc2;
+        border-radius: 15px;
+        outline: none;
+        position: absolute;
+        top: 25px;
+    }
+    .sidebar-navbar-collapse.collapse.show ul {
+        background: #000;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        bottom: 0;
+        transform: none;
+        padding-top: 150px;
+    }
+    .navbar {
+        display:  flex;
+        justify-content:  flex-end;
+    }
+    
+    
+    .section_heading {
+        margin: 0 15px;
+    }
+    
+    body,
+    .contact_info_wrapper {
+        text-align: center;
+    }
+
+    .inspiration_content .secondary-txt {
+        font-size: 18px;
+    }
+    .right_social_icons {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        background: #000;
+    }
+    .hero_section_social_icons {
+        margin-bottom: 0;
+    }
+    ul.hero_section_social_icons li {
+        display: inline-block;
+        margin: 5px 15px;
+        text-align: center;
+    }
+    .education_content, .experience_content {
+        margin-left: 0;
+    }
+    .sidebar {
+        width:  100%;
+        background: none;
+    }
+    .interests_images {
+        margin: auto;
+    }
+    .hero_section_btn {
+    margin: 10px auto;
+    }
+    .social_icons {
+        margin-top: 20px;
+        top: 0;
+    }
+    
+    .hero_section--button {
+        margin: 10px;
+        display: block;
+    }
+    .fav_books_images {
+        margin: 10px;
+    }
+}
+
+.menu_txt {
+    visibility: hidden;
+}
+
+#navbarNavDropdown {
+    margin-top: 150px;
+}
+
+.menu-item-wrapper a:hover {
+    border-color: #5BA4D9;
+}
+
+.menu_txt:hover {
+    border:1px solid;
+    border-left: none;
 }

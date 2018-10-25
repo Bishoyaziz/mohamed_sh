@@ -36,4 +36,15 @@
 // });
 
 
+jQuery(function(){
+    jQuery('.menu-item-wrapper').on('mouseenter',function(){
+        jQuery(this).find('.menu_txt').css("visibility","visible");
+    });
+
+    jQuery('.menu-item-wrapper').on('mouseleave',function(){
+        jQuery(this).find('.menu_txt').css("visibility","hidden");
+    });   
+});
+
+
 var scroll = new SmoothScroll('nav a[href*="#"]');

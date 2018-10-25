@@ -80,23 +80,83 @@ $social_media_2  = new WP_Query(array(
 
 		<div class="sidebar">
             <nav class="navbar navbar-expand-lg navbar-light">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="toggle-menu-icon"></span>
-                <span class="toggle-menu-icon"></span>
-                <span class="toggle-menu-icon"></span>                
-            </button>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggle-menu-icon"></span>
+                    <span class="toggle-menu-icon"></span>
+                    <span class="toggle-menu-icon"></span>                
+                </button>
                 <div id="navbarNavDropdown" class="sidebar-navbar-collapse sm-collapse">
-                    <ul class="navbar-items">
-                        <li class="nav-item"><a data-scroll href=""><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"><span class="menu_txt">about</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#education"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">education</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#experience"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">experience</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#skills"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">skills</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#portfolio"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">portfolio</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#interests"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">interests</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#inspiration"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">inspiration</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#favorite_books"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">books</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#contact"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">let's talk</span></a></li>				
-                    </ul>
+                    <div class="menu-item-wrapper" >
+                        <a href="#about" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#" class="menu_txt">about</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#education" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#education" class="menu_txt">education</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#experience" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#experience" class="menu_txt">experience</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#skills" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#skills" class="menu_txt">skills</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#portfolio" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#portfolio" class="menu_txt">portfolio</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#interests" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#interests" class="menu_txt">interests</a>  
+                    </div>                    
+                    <div class="menu-item-wrapper" >
+                        <a href="#inspiration" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#inspiration" class="menu_txt">inspiration</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#favorite_books" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png">
+                            </div>                        
+                        </a>
+                        <a href="#favorite_books" class="menu_txt">books</a>  
+                    </div>
+                    <div class="menu-item-wrapper" >
+                        <a href="#contact" class="menu-wrapper">
+                            <div class="menu-item">
+                                <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png">
+                            </div>                        
+                        </a> 
+                        <a href="#contact" class="menu_txt">let's talk</a>  
                 </div>
             </nav>
         </div>			
