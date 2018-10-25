@@ -129,7 +129,6 @@ function add_theme_scripts() {
 	 */
 	wp_enqueue_style( 'animate',  get_template_directory_uri() . '/assets/css/animate.css' );
 	wp_enqueue_style( 'bootstrap',  get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-	wp_enqueue_style( 'font-awesome',  get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'mohamed-style', get_stylesheet_uri() );
 	wp_style_add_data( 'mohamed-style', 'rtl', 'replace' );
 
@@ -139,7 +138,7 @@ function add_theme_scripts() {
 	 */
 	wp_enqueue_script('jquery', get_template_directory_uri() .'/assets/js/jQueryv3.3.1.js', array('jquery'), null, true);
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
-	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js');
+	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/smooth-scroll.min.js');
 	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom.js');
 }
 

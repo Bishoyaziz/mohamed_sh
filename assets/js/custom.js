@@ -16,12 +16,24 @@
 //     });
 // });
 
-jQuery("document").on({
-    mouseenter: function () {
-        jQuery('.menu_txt').css("display","block");
-    },
-    mouseleave: function () {
-        jQuery('.menu_txt').css("display","none");
-    },
-},".menu_icon");
 
+
+// jQuery("document").on({
+//     mouseenter: function () {
+//         jQuery('.menu_txt').css("display","block");
+//     },
+//     mouseleave: function () {
+//         jQuery('.menu_txt').css("display","none");
+//     },
+// },".menu_icon");
+
+
+
+// $(".nav-item a").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $(".second").offset().top},
+//         'slow');
+// });
+
+
+var scroll = new SmoothScroll('li.nav-item a[href*="#"]');

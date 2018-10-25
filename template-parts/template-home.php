@@ -85,15 +85,15 @@ $social_media_2  = new WP_Query(array(
             </button>
                 <div id="navbarNavDropdown" class="sidebar-navbar-collapse sm-collapse">
                     <ul class="navbar-items">
-                        <li class="nav-item"><a href="#hero_section"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#education"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#experience"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#skills"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#portfolio"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#interests"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#inspiration"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#favorite_books"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a href="#contact"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">Test</span></a></li>				
+                        <li class="nav-item"><a data-scroll href=""><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"></a></li>
+                        <li class="nav-item"><a data-scroll href="#education"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#experience"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#skills"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#portfolio"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#interests"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#inspiration"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#favorite_books"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">Test</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#contact"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">Test</span></a></li>				
                     </ul>
                 </div>
             </nav>
@@ -129,16 +129,21 @@ $social_media_2  = new WP_Query(array(
                         <?php echo $left_button_text; ?>
                     </a>
                     <div class="modal fade" id="videoResume" tabindex="-1" role="dialog" aria-labelledby="videoResume">
-                        <div class="modal-dialog" role="document" id="videoResume">
+                        <div class="modal-dialog modal-popup" role="document" id="videoResume">
                             <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
                                 <div class="modal-body">                                
-                                    <iframe id="iframeYoutube" width="400" height="315"  src="<?php echo $left_button_link ?>" frameborder="0" allowfullscreen></iframe>                                     
+                                    <!-- <iframe id="ifram" width="700" height="315"  src="<?php echo $left_button_link ?>" frameborder="0" allowfullscreen></iframe>                                      -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <a href="<?php echo $right_button_link ?>" class="hero_section_btn right-btn">
+                    <a target="_blank" href="<?php echo $right_button_link['url'] ?>"  class="hero_section_btn right-btn">
                         <?php echo $right_button_text; ?>
                     </a>
                 </div>
@@ -321,7 +326,7 @@ $social_media_2  = new WP_Query(array(
                                            $experience_item_id                =  get_the_id();
                                            $experience_company_name           =  get_field ('experience_company_name',get_the_id());
                                            $experience_address                =  get_field ('experience_address',get_the_id());
-                                           $experience_inspiration_job_title              =  get_field ('experience_inspiration_job_title',get_the_id());
+                                           $experience_inspiration_job_title  =  get_field ('experience_inspiration_job_title',get_the_id());
                                            $experience_from                   =  get_field ('experience_from',get_the_id());                                    
                                            $experience_to                     =  get_field ('experience_to',get_the_id());                                    
                                            $experience_responsbilities        =  get_field ('experience_responsbilities',get_the_id());                                    
