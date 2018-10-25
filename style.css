@@ -87,7 +87,7 @@ a:hover {color: #fff; text-decoration: none;}
     text-align: center;
     width: 100%;
     overflow: hidden;
-    margin: -20px 0;
+    margin: -15px 0;
     position: relative;
 }
 
@@ -103,7 +103,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 .sidebar {
     position: fixed;
-    width: 60px;
+    width: 100px;
     background: rgba(0,0,0,0.7);
     height: 100%;
     z-index: 3;
@@ -683,6 +683,10 @@ ul.hero_section_social_icons li a {
     color: #fff;
 }
 
+ul.hero_section_social_icons li a:hover {
+    color: #5BA4D9;
+}
+
 
 /* End Social Media */
 
@@ -726,6 +730,18 @@ ul.hero_section_social_icons li a {
 
 
 @media(max-width: 767px) {
+    .toggle-menu-icon {
+        width: 30px;
+        height: 1px;
+        background: #ffffffc4;
+        display: block;
+        margin: 8px 0;
+    }
+    .navbar-light .navbar-toggler {
+        border-color: #156cc2;
+        border-radius: 15px;
+        outline: none;
+    }
     .sidebar-navbar-collapse.collapse.show ul {
         background: #000;
         width: 100%;
@@ -920,9 +936,9 @@ ul.hero_section_social_icons li a {
 }
 
 .menu_icon {
-    display: inline-block;
+    display: block;
     width: 28px;
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 
@@ -934,7 +950,6 @@ ul.hero_section_social_icons li a {
 } 
 
 
-.menu_txt {display: none;}
 .modal-popup {
     max-width: 100%;
 }
@@ -963,4 +978,16 @@ ul.hero_section_social_icons li a {
 .close:not(:disabled):not(.disabled):hover {
     background-color: #156cc2;
     color: #fff;
+}
+
+/* Navbar */
+
+
+.navbar-items a {
+    text-transform: capitalize;
+}
+.menu_txt {
+    text-align: center;
+    display: block;
+    color: #5BA4D9;
 }

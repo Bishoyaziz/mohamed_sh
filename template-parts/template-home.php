@@ -81,19 +81,21 @@ $social_media_2  = new WP_Query(array(
 		<div class="sidebar">
             <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="toggle-menu-icon"></span>
+                <span class="toggle-menu-icon"></span>
+                <span class="toggle-menu-icon"></span>                
             </button>
                 <div id="navbarNavDropdown" class="sidebar-navbar-collapse sm-collapse">
                     <ul class="navbar-items">
-                        <li class="nav-item"><a data-scroll href=""><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"></a></li>
-                        <li class="nav-item"><a data-scroll href="#education"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#experience"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#skills"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#portfolio"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#interests"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#inspiration"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#favorite_books"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">Test</span></a></li>
-                        <li class="nav-item"><a data-scroll href="#contact"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">Test</span></a></li>				
+                        <li class="nav-item"><a data-scroll href=""><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png"><span class="menu_txt">about</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#education"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 3-8.png"><span class="menu_txt">education</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#experience"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 4-8.png"><span class="menu_txt">experience</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#skills"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 5-8.png"><span class="menu_txt">skills</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#portfolio"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 8-8.png"><span class="menu_txt">portfolio</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#interests"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 9-8.png"><span class="menu_txt">interests</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#inspiration"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 6-8.png"><span class="menu_txt">inspiration</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#favorite_books"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 7-8.png"><span class="menu_txt">books</span></a></li>
+                        <li class="nav-item"><a data-scroll href="#contact"><img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 11-8.png"><span class="menu_txt">let's talk</span></a></li>				
                     </ul>
                 </div>
             </nav>
@@ -125,7 +127,7 @@ $social_media_2  = new WP_Query(array(
             </div>
             <div class="hero_section--button">
                 <div class="hero_section__btns">
-                    <a href="#" class="hero_section_btn " data-toggle="modal" data-target="#videoResume">
+                    <a href="" class="hero_section_btn " data-toggle="modal" data-target="#videoResume">
                         <?php echo $left_button_text; ?>
                     </a>
                     <div class="modal fade" id="videoResume" tabindex="-1" role="dialog" aria-labelledby="videoResume">

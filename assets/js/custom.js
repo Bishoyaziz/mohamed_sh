@@ -36,4 +36,4 @@
 // });
 
 
-var scroll = new SmoothScroll('li.nav-item a[href*="#"]');
+var scroll = new SmoothScroll('nav a[href*="#"]');
