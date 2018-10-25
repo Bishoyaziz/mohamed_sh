@@ -33,11 +33,11 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-	<script src="<?php bloginfo('template_directory') ?>assets/js/jQueryv3.3.1"></script>
-    <script src="<?php bloginfo('template_directory') ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php bloginfo('template_directory') ?>assets/js/wow.min.js"></script>
-    <script src="<?php bloginfo('template_directory') ?>assets/js/isotope.pkgd.min.js"></script>
-    <script src="<?php bloginfo('template_directory') ?>assets/js/mixitup.min.js"></script>
-    <script src="<?php bloginfo('template_directory') ?>assets/js/custom.js"></script>
+	<script src="<?php bloginfo('template_directory') ?>/assets/js/jQueryv3.3.1"></script>
+    <script src="<?php bloginfo('template_directory') ?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ?>/assets/js/wow.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ?>/assets/js/isotope.pkgd.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ?>/assets/js/mixitup.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ?>/assets/js/custom.js"></script>
 </body>
 </html>

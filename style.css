@@ -21,6 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     src: url('assets/fonts/Helvetica Neue.ttf');
 }
 
+
 * {
     padding: 0;
     margin: 0;
@@ -105,10 +106,11 @@ a:hover {color: #fff; text-decoration: none;}
     width: 60px;
     background: rgba(0,0,0,0.7);
     height: 100%;
-    z-index:  9999;
+    z-index: 3;
 }
 .navbar {
     position: static;
+    margin-top: 20px;
 }
 
 .sidebar ul {
@@ -264,8 +266,8 @@ a:hover {color: #fff; text-decoration: none;}
 .inner_section_heading span {
     color: #63A1D7;
     font-size: 22px;
-    min-width: 150px;
-    text-align:  center;
+    min-width: 120px;
+    text-align: left;
 }
 .experience_point_icon {
     display: inline;
@@ -339,7 +341,7 @@ a:hover {color: #fff; text-decoration: none;}
 
 
 /* Inspiration */
-#inspiration_section {
+#inspiration {
     background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/43189430-H1-Arabian_Oryx copy.jpg") no-repeat;
     background-size: cover;
     position: relative;
@@ -347,7 +349,7 @@ a:hover {color: #fff; text-decoration: none;}
     padding-bottom: 50px;
 }
 
-#inspiration_section::before {
+#inspiration::before {
     position: absolute;
     content: "";
     top: 0;
@@ -398,6 +400,8 @@ a:hover {color: #fff; text-decoration: none;}
 
 .inspiration_content:hover img{
     border: 2px solid #5BA4D9;
+    width: 149px;
+    height: 149px;
 }
 .inspiration_content:hover h3 {
     color: #5BA4D9;
@@ -418,7 +422,7 @@ a:hover {color: #fff; text-decoration: none;}
     width: 680px;
 }
 
-#interests_section {
+#interests {
     background: #ddd;
     min-height: 100vh;
     padding-top: 50px;
@@ -449,14 +453,14 @@ a:hover {color: #fff; text-decoration: none;}
 
 
 /* Favorite Books */
-#favorite_books_section {
+#favorite_books {
     background: #ddd;
     padding-bottom: 20px;
 }
 
-#favorite_books_section .section_heading h3,
-#favorite_books_section .section_heading p,
-#favorite_books_section .section_heading q {
+#favorite_books .section_heading h3,
+#favorite_books .section_heading p,
+#favorite_books .section_heading q {
     color:  #8e8e8f;
 }
 .container.fav-books-container {
@@ -701,6 +705,21 @@ ul.hero_section_social_icons li a {
 
 
 @media(max-width: 767px) {
+    .sidebar-navbar-collapse.collapse.show ul {
+        background: #000;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        bottom: 0;
+        transform: none;
+        padding-top: 150px;
+    }
+    .navbar {
+        display:  flex;
+        justify-content:  flex-end;
+    }
+    
+    
     .section_heading {
         margin: 0 15px;
     }
@@ -717,7 +736,7 @@ ul.hero_section_social_icons li a {
         top: auto;
         bottom: 0;
         left: 0;
-        background: rgba(0,0,0,0.8);
+        background: #000;
     }
     .hero_section_social_icons {
         margin-bottom: 0;
@@ -731,7 +750,9 @@ ul.hero_section_social_icons li a {
         margin-left: 0;
     }
     .sidebar {
-        display: none;
+        /* display: none; */
+        width:  100%;
+        background: none;
     }
     .interests_images {
         margin: auto;
@@ -799,6 +820,8 @@ ul.hero_section_social_icons li a {
 
 .skills_content {
     padding-top: 10px;
+    width: 94%;
+    margin:  auto;
 }
 
 #skills .skill_content_wrapper {
@@ -818,7 +841,8 @@ ul.hero_section_social_icons li a {
 #skills .skills_item_inner_section .skills_title {
     color: #8e8e8f;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    float:  left;
 }
 
 #skills .skills_progress_bar {
@@ -879,9 +903,7 @@ ul.hero_section_social_icons li a {
     width: 28px;
     margin: 10px 0;
 }
-.menu_txt {
-    display: none;
-}
+
 
 .close {
     border: 1px solid #ddd !important;
@@ -891,6 +913,8 @@ ul.hero_section_social_icons li a {
 } 
 
 .modal-body {
-    width: 800px !important;
+    /* width: 800px !important; */
 }
 
+
+.menu_txt {display: none;}
