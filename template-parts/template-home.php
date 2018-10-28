@@ -77,8 +77,6 @@ $social_media_2  = new WP_Query(array(
 
 ?>
 
-
-
 		<div class="sidebar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="toggle-wrapper">
@@ -90,7 +88,7 @@ $social_media_2  = new WP_Query(array(
                 </div>
                 <div id="navbarNavDropdown" class="sidebar-navbar-collapse collapse hidden">
                     <div class="menu-item-wrapper" >
-                        <a href="#about" class="menu-wrapper">
+                        <a href="#" class="menu-wrapper">
                             <div class="menu-item">
                                 <img class="menu_icon" src="/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/icons/Asset 2-8.png">
                             </div>                        
@@ -183,14 +181,14 @@ $social_media_2  = new WP_Query(array(
                 <div class="circle-img">
                     <img src="<?php echo $home_image['url'] ?>" alt="<?php echo $home_image['alt'] ?>">
                 </div>
-                <h3 class="primary-txt"><?php echo $name; ?></h3>
+                <h3 class="primary-txt fadeIn"><?php echo $name; ?></h3>
                 <p class="secondary-txt">
                     <?php echo $summary; ?>
                 </p>
             </div>
             <div class="hero_section--button">
                 <div class="hero_section__btns">
-                    <a href="" class="hero_section_btn " data-toggle="modal" data-target="#videoResume">
+                    <a href="" class="hero_section_btn wow fadeIn" data-toggle="modal" data-target="#videoResume">
                         <?php echo $left_button_text; ?>
                     </a>
                     <div class="modal fade" id="videoResume" tabindex="-1" role="dialog" aria-labelledby="videoResume">
@@ -208,7 +206,7 @@ $social_media_2  = new WP_Query(array(
                         </div>
                     </div>
 
-                    <a target="_blank" href="<?php echo $right_button_link['url'] ?>"  class="hero_section_btn right-btn">
+                    <a target="_blank" href="<?php echo $right_button_link['url'] ?>"  class="hero_section_btn wow fadeIn right-btn">
                         <?php echo $right_button_text; ?>
                     </a>
                 </div>
@@ -222,7 +220,7 @@ $social_media_2  = new WP_Query(array(
         <div class="education_main_section">
             <div class="container">
                 <div class="row">
-                    <div class="section_heading">
+                    <div class="section_heading wow bounceIn">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                         <h3><?php echo __('Education') ?></h3>
                     </div>
@@ -231,8 +229,8 @@ $social_media_2  = new WP_Query(array(
                     <div class="row">
 
                         <div class="col-sm-12 col-md-6">
-                            <div class="inner_section_heading">
-                                <span class="hero_section_btn ">
+                            <div class="inner_section_heading wow fadeInLeft">
+                                <span class="hero_section_btn wow fadeIn">
                                     <?php echo __('Academic'); ?>
                                 </span>
                             </div>
@@ -251,8 +249,8 @@ $social_media_2  = new WP_Query(array(
 
                                ?>
 
-                                        <div class="inner_content">
-                                            <div class="education_point_icon">
+                                        <div class="inner_content wow fadeInLeft">
+                                            <div class="education_point_icon ">
                                                 <i class="fa fa-plus"></i>
                                                 <a href="#id<?php echo $education_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $education_item_id; ?>" class="secondary-txt">
                                                     <?php echo $education_title; ?>
@@ -272,8 +270,8 @@ $social_media_2  = new WP_Query(array(
                         </div>
 
                         <div class="col-sm-12 col-md-6">
-                            <div class="inner_section_heading">
-                            <span class="hero_section_btn ">
+                            <div class="inner_section_heading wow fadeInRight">
+                            <span class="hero_section_btn wow fadeIn">
                                     <?php echo __('Training'); ?>
                                 </span>
                             </div>
@@ -292,8 +290,8 @@ $social_media_2  = new WP_Query(array(
                                     if($education_type !== 'academic') {
                                 ?>
 
-                                        <div class="inner_content">
-                                            <div class="education_point_icon">
+                                        <div class="inner_content wow fadeInRight">
+                                            <div class="education_point_icon ">
                                                 <i class="fa fa-plus"></i>
                                                 <a href="#id<?php echo $education_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $education_item_id; ?>" class="secondary-txt">
                                                     <?php echo $education_title; ?>
@@ -321,7 +319,7 @@ $social_media_2  = new WP_Query(array(
 
     <section id="experience">
         <div class="container">
-            <div class="section_heading">
+            <div class="section_heading wow bounceIn">
                 <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                 <h3 class="white"><?php echo __('Experience') ?></h3>
             </div>
@@ -329,8 +327,8 @@ $social_media_2  = new WP_Query(array(
 
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <div class="inner_section_heading">
-                        <span class="hero_section_btn ">
+                        <div class="inner_section_heading wow fadeInLeft">
+                        <span class="hero_section_btn wow fadeInDown">
                                     <?php echo __('Work'); ?>
                                 </span>
                         </div>
@@ -349,7 +347,7 @@ $social_media_2  = new WP_Query(array(
                                         if($experience_type == 'work') {
                                     ?>
 
-                                <div class="inner_content">
+                                <div class="inner_content wow fadeInLeft">
                                     <div class="experience_point_icon">
                                         <i class="fa fa-plus"></i>
                                         <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
@@ -380,8 +378,8 @@ $social_media_2  = new WP_Query(array(
                     </div>
 
                     <div class="col-sm-12 col-md-6">
-                        <div class="inner_section_heading">
-                            <span class="hero_section_btn ">
+                        <div class="inner_section_heading wow bounceIn">
+                            <span class="hero_section_btn wow fadeInRight">
                                 <?php echo __('Volunteering'); ?>
                             </span>
                         </div>
@@ -400,7 +398,7 @@ $social_media_2  = new WP_Query(array(
                                         if($experience_type == 'volunteering') {
                                     ?>
 
-                                <div class="inner_content">
+                                <div class="inner_content wow fadeInRight">
                                     <div class="education_point_icon">
                                         <i class="fa fa-plus"></i>
                                         <a href="#id<?php echo $experience_item_id; ?>" data-toggle="collapse" data-target="#id<?php echo $experience_item_id; ?>" class="secondary-txt">
@@ -441,7 +439,7 @@ $social_media_2  = new WP_Query(array(
         <div class="skills_main_section">
             <div class="container">
                 <div class="row">
-                    <div class="section_heading">
+                    <div class="section_heading wow bounceIn">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 5-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                         <h3><?php echo __('Skills') ?></h3>
                     </div>
@@ -474,7 +472,7 @@ $social_media_2  = new WP_Query(array(
                                     ?>
                                 <div class="col-sm-4 skill_content_wrapper">
 
-                                    <div class="inner_section_heading">
+                                    <div class="inner_section_heading wow pulse">
                                         <a href="" class="heading_btn">
                                             <?php echo $skill_category_name; ?>
                                         </a>
@@ -539,7 +537,7 @@ $social_media_2  = new WP_Query(array(
                                 <?php endwhile; ?>
                         </div>
                         <div class="language_section">
-                            <div class="inner_section_heading">
+                            <div class="inner_section_heading wow fadeIn">
                                 <a href="" class="heading_btn">
                                     <?php echo __('Language'); ?>
                                 </a>
@@ -576,10 +574,31 @@ $social_media_2  = new WP_Query(array(
             </div>
     </section>
 
+    <section id="portfolio">
+    <div class="section_heading wow bounceIn">
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 6-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                    <h3 class="white"><?php echo __('Portfolio') ?></h3>
+                </div>
+      <div class="container">
+      <div class="row text-center">
+          <div class="col-md-1">
+        </div>
+        <div class="col-md-10 mx-auto">
+        
+        <?php 
+             echo do_shortcode('[af-portfolio]');
+        ?>  
+        </div>
+         <div class="col-md-1">
+        </div>                                         
+      </div>
+      </div>
+    </section>  
+
     <section id="interests">
         <div class="container interests_main_section">
             <div class="row">
-                <div class="section_heading">
+                <div class="section_heading wow bounceIn">
                     <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 7-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                     <h3 class="white"><?php echo __('Interests') ?></h3>
                 </div>
@@ -592,7 +611,7 @@ $social_media_2  = new WP_Query(array(
                                 $interest_img    =  get_field ('interest_img',get_the_ID());
                             ?>
                             <div class="col-md-4 interests_images">
-                                <img src="<?php echo $interest_img['url'] ?>" alt="<?php echo $interest_img['alt'] ?>">
+                                <img class="wow bounceIn" src="<?php echo $interest_img['url'] ?>" alt="<?php echo $interest_img['alt'] ?>">
                                 <div class="interests_txt">
                                     <p>
                                         <?php echo $interest_title; ?>
@@ -606,7 +625,7 @@ $social_media_2  = new WP_Query(array(
 
     <section id="inspiration">
             <div class="row">
-                <div class="section_heading">
+                <div class="section_heading wow bounceIn">
                     <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 8-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                     <h3 class="white"><?php echo __('Inspiration') ?></h3>
                 </div>
@@ -619,7 +638,7 @@ $social_media_2  = new WP_Query(array(
                                 $inspiration_job_title              =  get_field ('inspiration_job_title',get_the_id());                        
                             ?>
 
-                        <div class="inspiration_content">
+                        <div class="inspiration_content wow pulse">
                             <img src="<?php echo $inspiration_img['url'] ?>" alt="<?php get_the_title(); ?>">
                             <h3><?php echo $inspiration_name; ?></h3>
                             <p>
@@ -639,7 +658,7 @@ $social_media_2  = new WP_Query(array(
         <div class="favorite-books__main_section">
             <div class="container">
                 <div class="row">
-                    <div class="section_heading">
+                    <div class="section_heading wow bounceIn">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 9-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                         <h3><?php echo __('Favorite Books') ?></h3>
                         <q><?php  echo __('Books can be dangerous. The best ones should be labeled “This could change your life')?></q>
@@ -656,7 +675,7 @@ $social_media_2  = new WP_Query(array(
                             $book_title       =      get_field('book_title', get_the_id());                            
                         ?>
 
-                            <div class="col-sm-12 col-md-4 fav_books_images">
+                            <div class="col-sm-12 col-md-4 fav_books_images wow fadeIn">
                                 <img src="<?php echo $book_image['url'] ?>" alt="<?php echo $book_title['alt'] ?>">
                                 <div class="overlay">
                                     <div class="text align-center">
@@ -674,14 +693,14 @@ $social_media_2  = new WP_Query(array(
         <div class="contact__main_section">
             <div class="container">
                 <div class="row">
-                    <div class="section_heading">
+                    <div class="section_heading wow bounceIn">
                         <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 11-8.png" width="80" alt="<?php echo get_the_title(); ?>">
                         <h3 class="white"><?php echo __("Let's Talk") ?></h3>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-7 wow fadeInLeft">
                             <?php 
                             if(ICL_LANGUAGE_CODE=='en'){
                                 echo do_shortcode('[contact-form-7 id="55" title="Contact form 1"]');
@@ -691,11 +710,11 @@ $social_media_2  = new WP_Query(array(
                             ?>
                         </div>
                         <div class="col-md-1"></div>
-                        <div class="col-md-4 contact_info_wrapper">
+                        <div class="col-md-4 contact_info_wrapper wow fadeInRight">
                             <div class="contact_info ">
                                 <span class="heading_btn"><?php echo __('Contact info') ?></span>
                             </div>
-                            <div class="contact_info_details ">
+                            <div class="contact_info_details">
                                 <p><span>Email: </span><?php echo $contact_email ?></p>
                                 <p><span>UAE: </span><?php echo $contact_phone_1 ?></p>
                                 <p><span>Egypt: </span><?php echo $contact_phone_2 ?></p>

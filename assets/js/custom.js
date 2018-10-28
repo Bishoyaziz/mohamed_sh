@@ -44,7 +44,29 @@ jQuery(function(){
     jQuery('.menu-item-wrapper').on('mouseleave',function(){
         jQuery(this).find('.menu_txt').css("visibility","hidden");
     });   
+
+
+    jQuery('.menu-item-wrapper').on('mouseenter',function(){
+        jQuery(this).find('.menu_txt').css("visibility","visible");
+    });
+
+    jQuery('.adipoli-wrapper').on('mouseenter',function(){
+        jQuery(this).parents('.afp-single-item').find('.portfolio-project-name').css("visibility","visible");
+    });
+    
+    jQuery('.adipoli-wrapper').on('mouseleave',function(){
+        jQuery(this).parents('.afp-single-item').find('.portfolio-project-name').css("visibility","hidden");
+    });
+    jQuery('.adipoli-wrapper').on('mouseenter',function(){
+        jQuery(this).parents('.afp-single-item').find('.portfolio-project-name').css("visibility","visible");
+    });
+    
+
+
 });
 
 
 var scroll = new SmoothScroll('nav a[href*="#"]');
+
+
+new WOW().init();

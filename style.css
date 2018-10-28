@@ -38,7 +38,7 @@ body {
 .section_heading h3  {
     padding-top: 10px;
 }
-a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
+a:hover {color: #fff;text-decoration: none;}
 .primary-txt {
     color: #5BA4D9;
 }
@@ -83,6 +83,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     -moz-background-size: cover;
     -ms-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     text-align: center;
     width: 100%;
@@ -328,6 +329,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     -ms-background-size: cover;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
     z-index: 0;
 }
 
@@ -355,6 +357,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     background-size: cover;
     position: relative;
     z-index: 0;
+    background-attachment: fixed;
     padding-bottom: 50px;
 }
 
@@ -436,6 +439,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     min-height: 100vh;
     padding-top: 50px;
     padding-bottom: 50px;
+    position:  relative;
 }
 
 .container.interests-container {
@@ -545,6 +549,7 @@ a:hover {color: #fff; text-decoration: none; border: #5BA4D9; }
     background-size: cover;
     background-position: center;
     position: relative;
+    background-attachment: fixed;
     z-index: 0;
     padding-bottom: 20px;
 }
@@ -694,44 +699,6 @@ ul.hero_section_social_icons li a:hover {
 
 /* Media Quaries */
 
-@media (max-width: 992px) {
-    .fav_books_images img {
-        min-width: auto;
-    }
-    .contact_info_details p {
-        font-size: 16px;
-    }
-    #ifram {
-        width: 100%;
-        margin: -10px;
-    }
-    .education_content, .experience_content {
-        padding-top: 50px !important;
-    }
-    #education p, #experience p {
-        margin-left: 0;
-    }
-    .interests_main_section {
-        width: 100%;
-    }
-    
-    .scanner .barcode_txt .barcode_txt--first-line {
-        margin-right: 0;
-    }
-    .container.fav-books-container {
-        width: auto;
-    }
-    .inspiration_content {
-        width: 100%;
-    }
-
-    .hero_section--main-heading p {
-        font-size: 1.1em;
-    }
-}
-
-
-
 
 .align-center {
     position: relative;
@@ -764,8 +731,8 @@ ul.hero_section_social_icons li a:hover {
 
 #skills {
     background: #ddd;
-    padding-top: 50px;
     position:  relative;
+    padding: 50px 0;
 }
  
 #skills .section_heading h3 {
@@ -802,6 +769,7 @@ ul.hero_section_social_icons li a:hover {
     font-weight: bold;
     font-size: 16px;
     float:  left;
+    text-align:  left;
 }
 
 #skills .skills_progress_bar {
@@ -815,7 +783,6 @@ ul.hero_section_social_icons li a:hover {
     margin-bottom: 20px;
 }
 
-/* End Skills */
 
 .progress {
     border-radius: 20px;
@@ -856,6 +823,157 @@ ul.hero_section_social_icons li a:hover {
 .white {
     color: #fff;
 }
+
+
+/* Portfolio */
+#portfolio {
+    background: url("/mohamed_sh/wp-content/themes/mohamed_sh/assets/images/backgrounds/Barqouqy_mosque_-_Moez_street copy.jpg") no-repeat;
+    background-position: 100%;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    position: relative;
+    z-index: 0;
+    height:  100vh;
+}
+
+#portfolio::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+
+
+#portfolio .section_heading {
+    padding-top: 0;
+}
+ul.afp-items {
+    display: inline-block !important;
+    list-style: none;
+    padding-top: 70px !important;
+}
+
+#portfolio .afp-items {
+    height: 100% !important;
+}
+
+#afp-container {
+    margin: auto;
+}
+
+#portfolio a.colorbox.cboxElement {
+    /* float: left; */
+}
+
+.portfolio-project-name {
+    display: block;
+    z-index: 3;
+    top: -120px;
+    visibility: hidden;
+}
+
+#portfolio #afp-filter a {
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.8;
+    padding: 10px 20px;
+}
+
+.afp-active-cat,
+#portfolio #afp-filter a:hover {
+    border-radius: 10px;
+    color: #5ba4d9;
+}
+
+#portfolio a {
+    text-decoration: none;
+}
+.adipoli-after.img-link-initial {
+    display: block !important;
+    opacity: 0;
+}
+
+#portfolio .afp-single-item img {
+    position:  relative;
+    max-width: 200px;
+    display: inline;
+    min-height: 200px;
+}
+
+#portfolio .afp-single-item img:hover,
+#portfolio .afp-single-item img:hover .portfolio-project-name:hover 
+ {
+    border: 1px solid #5ba4d9;
+    color: #fff;
+}
+#portfolio .afp-single-item img:hover .portfolio-project-name {
+    display: block;
+} 
+#portfolio .afp-single-item img:hover:before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+ul#afp-filter li {
+    display: inline-block;
+    padding: 8px 10px !important;
+}
+
+#ul.afp-items {
+    position: relative;
+}
+
+.afp-active-cat a{ 
+    color: #5ba4d9 !important;
+    border: 1px solid #5ba4d9;
+    border-radius: 10px;
+}
+
+
+#portfolio .adipoli-after {
+    z-index: 0 !important;
+}
+#portfolio .afp-item-details li:hover {
+    position: relative;
+    z-index: 999;
+}
+
+#portfolio .afp-item-details li:first-child {
+    /* margin-top: 20px; */
+}
+
+#portfolio ul.afp-item-details .portfolio-project-name  {
+    color: #fff;
+    position: relative;
+    z-index:  5;
+    bottom: 0;
+    cursor:  pointer;
+    text-transform:  capitalize;
+    font-size: 20px;
+}
+
+#portfolio ul.afp-item-details .portfolio-project-name:hover {
+    color: #fff !important;
+    display: block;
+    visibility: visible !important;
+}
+#portfolio ul.afp-item-details .portfolio-project-name:hover img {
+    border: 2px solid #63A1D7;
+}
+
+/* End Portfolio */
+
 
 .menu_icon {
     display: inline-block;
@@ -976,7 +1094,88 @@ ul.hero_section_social_icons li a:hover {
         display: block;
     }
 }
+
+
+@media (max-width: 992px) {
+    #portfolio ul.afp-item-details .portfolio-project-name {
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-20%,-60%); */
+    }
+
+    #portfolio {
+        height: 952px;
+    }
+    
+    ul.afp-items li {
+        /* padding: 0; */
+    }
+    #skills .skills_item_inner_section .skills_title {
+        float: none;
+    }
+    #portfolio #afp-filter a {
+        padding: 10px !important;
+    }
+    #portfolio ul.afp-item-details .portfolio-project-name {
+        /* left: 25px; */
+    }
+    ul.afp-items li {
+        margin: auto;
+        /* width: 50%; */
+    }
+    .fav_books_images img {
+        min-width: auto;
+    }
+    .contact_info_details p {
+        font-size: 16px;
+    }
+    #ifram {
+        width: 100%;
+        margin: -10px;
+    }
+    .education_content, .experience_content {
+        padding-top: 50px;
+    }
+    #education p, #experience p {
+        margin-left: 0;
+    }
+    .interests_main_section {
+        width: 100%;
+    }
+    
+    .scanner .barcode_txt .barcode_txt--first-line {
+        margin-right: 0;
+    }
+    .container.fav-books-container {
+        width: auto;
+    }
+    .inspiration_content {
+        width: 50%;
+    }
+
+    .hero_section--main-heading p {
+        font-size: 1.1em;
+    }
+}
 @media(max-width: 767px) {
+    #portfolio {
+        height: 100%;
+    }
+    #portfolio ul.afp-item-details .portfolio-project-name {
+        top: auto;
+        left: auto;
+        transform: none;
+        bottom: 125px;
+    }
+    #portfolio a.colorbox.cboxElement {
+        float: none;
+    }
+    .fp-items {
+        width: 100% !important;
+    }
+    ul.afp-items li {
+        width: 100%;
+    }
 
     .menu-item-wrapper {
         background: rgba(0, 0, 0, 0.7);
@@ -1056,6 +1255,7 @@ ul.hero_section_social_icons li a:hover {
     body,
     .contact_info_wrapper {
         text-align: center;
+        padding-bottom: 20px;
     }
 
     .inspiration_content .secondary-txt {
@@ -1109,3 +1309,12 @@ ul.hero_section_social_icons li a:hover {
     height: 80px;
     margin-top: -50px;
 }
+
+.colorbox {
+    border: none !important;
+}
+
+.afp-item-details li,.adipoli-before.img-link-initial,#portfolio .afp-item-details li {
+    border: none !important;
+}
+
