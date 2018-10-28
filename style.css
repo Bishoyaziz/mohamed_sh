@@ -970,7 +970,14 @@ ul.hero_section_social_icons li a:hover {
         left: 25px;
     }
 }
+
+@media(min-width: 768px) {
+    .collapse.hidden {
+        display: block;
+    }
+}
 @media(max-width: 767px) {
+
     .menu-item-wrapper {
         background: rgba(0, 0, 0, 0.7);
     }
@@ -1025,7 +1032,7 @@ ul.hero_section_social_icons li a:hover {
         outline: none;
         position: relative;
         top: 25px;
-        left: 42%;
+        left: 40%;
     }
     .sidebar-navbar-collapse.collapse.show ul {
         background: #000;
@@ -1100,4 +1107,5 @@ ul.hero_section_social_icons li a:hover {
 .toggle-wrapper {
     background: #000;
     height: 80px;
+    margin-top: -50px;
 }

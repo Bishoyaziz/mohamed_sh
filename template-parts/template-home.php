@@ -88,7 +88,7 @@ $social_media_2  = new WP_Query(array(
                     <span class="toggle-menu-icon"></span>                
                 </button>
                 </div>
-                <div id="navbarNavDropdown" class="sidebar-navbar-collapse sm-collapse collapsed">
+                <div id="navbarNavDropdown" class="sidebar-navbar-collapse collapse hidden">
                     <div class="menu-item-wrapper" >
                         <a href="#about" class="menu-wrapper">
                             <div class="menu-item">
