@@ -176,13 +176,13 @@ $social_media_2  = new WP_Query(array(
                     <div class="circle-img">
                         <img src="<?php echo $home_image['url'] ?>" alt="<?php echo $home_image['alt'] ?>">
                     </div>
-                    <h3 class="primary-txt fadeIn"><?php echo $name; ?></h3>
-                    <p class="secondary-txt">
+                    <h3 class="primary-txt wow fadeIn"><?php echo $name; ?></h3>
+                    <p class="secondary-txt wow fadeIn" data-wow-delay="0.3s"">
                         <?php echo $summary; ?>
                     </p>
                 </div>
                 <div class="hero_section--button">
-                    <div class="hero_section__btns">
+                    <div class="hero_section__btns wow fadeIn" data-wow-delay="0.5s">
                         <a href="" class="hero_section_btn wow fadeIn" data-toggle="modal" data-target="#videoResume">
                             <?php echo $left_button_text; ?>
                         </a>
@@ -216,7 +216,7 @@ $social_media_2  = new WP_Query(array(
                 <div class="container">
                     <div class="row">
                         <div class="section_heading wow bounceIn">
-                            <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                            <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-02.png" width="100" alt="<?php echo get_the_title(); ?>">
                             <h3><?php echo __('Education') ?></h3>
                         </div>
                     </div>
@@ -315,7 +315,7 @@ $social_media_2  = new WP_Query(array(
         <section id="experience">
             <div class="container">
                 <div class="section_heading wow bounceIn">
-                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 3-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-03.png" width="100" alt="<?php echo get_the_title(); ?>">
                     <h3 class="white"><?php echo __('Experience') ?></h3>
                 </div>
                 <div class="experience_content">
@@ -435,7 +435,7 @@ $social_media_2  = new WP_Query(array(
             <div class="container">
                 <div class="row">
                     <div class="section_heading wow bounceIn">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 5-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-04.png" width="100" alt="<?php echo get_the_title(); ?>">
                         <h3><?php echo __('Skills') ?></h3>
                     </div>
                 </div>
@@ -468,9 +468,9 @@ $social_media_2  = new WP_Query(array(
                                 <div class="col-sm-4 skill_content_wrapper">
 
                                     <div class="inner_section_heading wow pulse">
-                                        <a href="" class="heading_btn">
+                                        <span class="heading_btn hero_section_btn">
                                             <?php echo $skill_category_name; ?>
-                                        </a>
+                                        </span>
                                         <div class="skills_item_section">
                                             <div class="skills_item_inner_section">
                                                 <span class="skills_title"><?php echo $skill_1; ?> </span>
@@ -571,7 +571,7 @@ $social_media_2  = new WP_Query(array(
 
     <section id="portfolio">
         <div class="section_heading wow bounceIn">
-            <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 6-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+            <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-05.png" width="100" alt="<?php echo get_the_title(); ?>">
             <h3 class="white"><?php echo __('Portfolio') ?></h3>
         </div>
         <div class="container">
@@ -594,8 +594,8 @@ $social_media_2  = new WP_Query(array(
         <div class="container interests_main_section">
             <div class="row">
                 <div class="section_heading wow bounceIn">
-                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 7-8.png" width="80" alt="<?php echo get_the_title(); ?>">
-                    <h3 class="white"><?php echo __('Interests') ?></h3>
+                    <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-06.png" width="100" alt="<?php echo get_the_title(); ?>">
+                    <h3><?php echo __('Interests') ?></h3>
                 </div>
             </div>
             <div class="container interests-container">
@@ -621,7 +621,7 @@ $social_media_2  = new WP_Query(array(
     <section id="inspiration">
         <div class="row">
             <div class="section_heading wow bounceIn">
-                <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 8-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-07.png" width="100" alt="<?php echo get_the_title(); ?>">
                 <h3 class="white"><?php echo __('Inspiration') ?></h3>
             </div>
         </div>
@@ -654,7 +654,7 @@ $social_media_2  = new WP_Query(array(
             <div class="container">
                 <div class="row">
                     <div class="section_heading wow bounceIn">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 9-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-08.png" width="100" alt="<?php echo get_the_title(); ?>">
                         <h3><?php echo __('Favorite Books') ?></h3>
                         <q><?php  echo __('Books can be dangerous. The best ones should be labeled “This could change your life')?></q>
                         <p>
@@ -689,7 +689,7 @@ $social_media_2  = new WP_Query(array(
             <div class="container">
                 <div class="row">
                     <div class="section_heading wow bounceIn">
-                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/Asset 11-8.png" width="80" alt="<?php echo get_the_title(); ?>">
+                        <img src="<?php  echo bloginfo('template_directory');  ?>/assets/images/icons/icons blue-09.png" width="100" alt="<?php echo get_the_title(); ?>">
                         <h3 class="white"><?php echo __("Let's Talk") ?></h3>
                     </div>
                 </div>
