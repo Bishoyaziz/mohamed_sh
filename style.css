@@ -1309,12 +1309,3 @@ ul#afp-filter li {
     height: 80px;
     margin-top: -50px;
 }
-
-.colorbox {
-    border: none !important;
-}
-
-.afp-item-details li,.adipoli-before.img-link-initial,#portfolio .afp-item-details li {
-    border: none !important;
-}
-
