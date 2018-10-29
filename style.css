@@ -114,6 +114,12 @@ a:hover {color: #fff;text-decoration: none;}
     height:  100vh;
 }
 
+.menu-item-wrapper a {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
 .sidebar ul {
     padding: 0;
@@ -508,16 +514,20 @@ a:hover {color: #fff;text-decoration: none;}
 .fav_books_images img {
     display: block;
     margin:  auto;
-    border: 2px solid #62a1d7;
     max-width: 200px;
     min-height:  100%;
     min-width:  100%;
+}
+.fav_books_images:hover {
 }
 
 .fav_books_images:hover .overlay {
     opacity: 1;
     transition: ease 0.3s;
+    border: 2px solid #62a1d7;
+    width: 90%;
 }
+
 
 .fav_books_images .overlay {
     position: absolute;
@@ -838,7 +848,6 @@ ul.hero_section_social_icons li a:hover {
     padding: 100px 0;
     position: relative;
     z-index: 0;
-    height:  100vh;
 }
 
 #portfolio::before {
@@ -866,16 +875,14 @@ ul.afp-items {
 }
 
 #portfolio .afp-items {
-    height: 100% !important;
+    /* height: 100% !important; */
 }
 
 #afp-container {
     margin: auto;
 }
 
-#portfolio a.colorbox.cboxElement {
-    /* float: left; */
-}
+
 
 .portfolio-project-name {
     display: block;
@@ -1075,7 +1082,7 @@ ul#afp-filter li {
     height: 8vh;
     width: 60px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .menu-txt-wrapper {
@@ -1220,8 +1227,8 @@ ul#afp-filter li {
     }
     .toggle-menu-icon {
         width: 30px;
-        height: 1px;
-        background: #156cc2;
+        height: 2px;
+        background: #fff;
         display: block;
         margin: 8px 0;
     }
@@ -1232,6 +1239,8 @@ ul#afp-filter li {
         position: relative;
         top: 25px;
         left: 40%;
+        background: #62a1d7;
+        z-index:  999;
     }
     .sidebar-navbar-collapse.collapse.show ul {
         background: #000;
@@ -1309,3 +1318,4 @@ ul#afp-filter li {
     height: 80px;
     margin-top: -50px;
 }
+

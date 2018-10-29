@@ -1,18 +1,18 @@
-// $(function(){
-//     $('.menu_icon').hover(function(){
-//         $('.menu_icon').mouseenter(function(){
-//             $('.menu_txt').css("display","block");
+// jQuery(function(){
+//     jQuery('.menu_icon').hover(function(){
+//         jQuery('.menu_icon').mouseenter(function(){
+//             jQuery('.menu_txt').css("display","block");
 //         });
-//         $('.menu_icon').mouseleave(function(){
-//             $('.menu_txt').css("display","none");
+//         jQuery('.menu_icon').mouseleave(function(){
+//             jQuery('.menu_txt').css("display","none");
 //         });
 //     });
   
 // });
 
-// $("menu_icon").on("mouseover", function(){
-//     $('.menu_icon').mouseleave(function(){
-//         $('.menu_txt').css("display","block");
+// jQuery("menu_icon").on("mouseover", function(){
+//     jQuery('.menu_icon').mouseleave(function(){
+//         jQuery('.menu_txt').css("display","block");
 //     });
 // });
 
@@ -29,9 +29,9 @@
 
 
 
-// $(".nav-item a").click(function() {
-//     $('html,body').animate({
-//         scrollTop: $(".second").offset().top},
+// jQuery(".nav-item a").click(function() {
+//     jQuery('html,body').animate({
+//         scrollTop: jQuery(".second").offset().top},
 //         'slow');
 // });
 
@@ -61,7 +61,9 @@ jQuery(function(){
         jQuery(this).parents('.afp-single-item').find('.portfolio-project-name').css("visibility","visible");
     });
     
-
+    jQuery('.menu-item-wrapper a').click(function(){
+        jQuery('#navbarNavDropdown').removeClass('show');
+    }); 
 
 });
 
